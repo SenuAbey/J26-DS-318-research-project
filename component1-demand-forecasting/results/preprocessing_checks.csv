@@ -1,0 +1,37 @@
+stage,check,status,detail
+A raw data,calendar.csv exists,PASS,
+A raw data,sales_train_evaluation.csv exists,PASS,
+A raw data,sell_prices.csv exists,PASS,
+A raw data,required columns exist,PASS,
+A raw data,sales has 1941 day columns,PASS,1941
+A raw data,no missing values in raw sales,PASS,0
+A raw data,no missing values in raw prices,PASS,0
+A raw data,calendar: missing values only in event columns,PASS,0 elsewhere
+A raw data,no duplicate sales rows,PASS,
+A raw data,no duplicate days in calendar,PASS,
+A raw data,no duplicate price rows,PASS,
+A raw data,no negative sales,PASS,0
+A raw data,all prices > 0,PASS,0.01
+A raw data,calendar covers every sales day,PASS,
+A raw data,calendar dates are continuous (1 day apart),PASS,
+A raw data,price weeks exist in the calendar,PASS,
+A raw data,chosen store is in the sales file,PASS,CA_1
+A raw data,"3 categories (FOODS, HOBBIES, HOUSEHOLD)",PASS,"['FOODS', 'HOBBIES', 'HOUSEHOLD']"
+A raw data,10 stores,PASS,10
+B1 subset,"only the chosen store, unique items",PASS,"{'FOODS': 70, 'HOBBIES': 70, 'HOUSEHOLD': 70}"
+B2 melt,rows = series x days,PASS,407610
+B2 melt,total sales unchanged by melt,PASS,
+B3 calendar,row count unchanged and every day matched a date,PASS,
+B3 calendar,no missing event values left,PASS,
+B4 weekly,total sales unchanged by aggregation,PASS,
+B4 weekly,every item has the same number of full weeks,PASS,277
+B4 weekly,277 full weeks per item,PASS,
+B5 prices,row count unchanged by the price merge,PASS,
+B5 prices,no missing prices left,PASS,0 gap(s) filled
+B7 full history,at least 100 series left (needed for TFT),PASS,134
+B8 split,split is about 70/15/15 (+-2%),PASS,"{'train': 0.7, 'calib': 0.152, 'test': 0.148}"
+B9 zero filter,enough series left (>= 100),PASS,129
+B9 zero filter,all 3 categories left (needed for decomposition),PASS,"{'FOODS': 51, 'HOBBIES': 47, 'HOUSEHOLD': 31}"
+B11 features,no infinite or missing values in the new features,PASS,
+B11 features,promo weeks are a sensible share (1%-60%),PASS,9.6%
+B11 features,event weeks are a sensible share (1%-50%),PASS,47.7%
