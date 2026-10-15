@@ -1,0 +1,14 @@
+step,value
+series after subset,210.0
+incomplete-week rows dropped,210.0
+weeks with missing price (before cleaning),4706.0
+pre-launch rows dropped,4706.0
+price gaps forward-filled,0.0
+duplicate rows dropped,0.0
+series dropped (incomplete history),76.0
+series dropped (too many zero weeks),5.0
+"extreme-sales weeks, share (kept)",0.0022
+final series,129.0
+weeks per series,277.0
+final rows,35733.0
+zero-sales share overall,0.08

@@ -1,0 +1,46 @@
+step,check,status,detail
+1 File,parquet file exists,PASS,D:\4YS1\Research\J26-DS-318-research-project\component1-demand-forecasting\data\processed\m5_weekly_ca1.parquet
+1 File,columns match the expected list,PASS,
+1 File,week_start is a date,PASS,
+1 File,sales and price columns are numeric,PASS,
+2 Cleaning,no missing values in any column,PASS,0 missing
+2 Cleaning,"no duplicate (series, week) rows",PASS,0 duplicates
+2 Cleaning,no negative sales,PASS,min=0
+2 Cleaning,all prices > 0,PASS,min=0.2
+2 Cleaning,no infinite values,PASS,
+2 Cleaning,column names are lowercase without spaces,PASS,
+3 Subset,only store CA_1,PASS,{'CA_1'}
+3 Subset,series_id = item_id + '_' + store_id,PASS,
+3 Subset,series per category <= setting,PASS,"{'FOODS': 51, 'HOBBIES': 47, 'HOUSEHOLD': 31}"
+3 Subset,all 3 categories present (needed for decomposition),PASS,"['FOODS', 'HOBBIES', 'HOUSEHOLD']"
+3 Subset,enough series to train TFT (>= 100),PASS,129 series
+4 Weekly,every series has the same number of weeks,PASS,277 weeks
+4 Weekly,weeks per series = 277 (expected for M5),PASS,277
+4 Weekly,time_idx starts at 0 for every series,PASS,
+4 Weekly,time_idx ends at the same value for every series,PASS,max=276
+4 Weekly,exactly 7 days between consecutive weeks (no gaps),PASS,
+4 Weekly,time_idx increases by exactly 1,PASS,
+4 Weekly,all series share the same week_start dates,PASS,
+5 Split,split labels are train / calib / test only,PASS,"{'calib', 'train', 'test'}"
+5 Split,split labels follow the time_idx rule,PASS,
+5 Split,train < calib < test in time (no overlap),PASS,"train<= 193, calib 194-235, test>= 236"
+5 Split,split is about 70/15/15 (+-2%),PASS,"{'train': 0.7, 'calib': 0.152, 'test': 0.148}"
+5 Split,every series appears in all three splits,PASS,
+6 Zero filter,every series has < 30% zero weeks in training,PASS,max share = 0.253
+6 Zero filter,overall zero-sales share is small (< 15%),PASS,0.080
+7 Features,price_ratio uses the TRAINING median only (no leakage),PASS,
+7 Features,promo_flag = (price_ratio < 0.95),PASS,
+7 Features,price_change matches a fresh recomputation,PASS,
+7 Features,has_event = (event_name != 'none'),PASS,
+7 Features,events exist and are not all 'none',PASS,47.7% event weeks
+7 Features,'Christmas' appears in events,PASS,
+7 Features,week_of_year in 1-53,PASS,
+7 Features,month is 1-12,PASS,
+7 Features,season matches month,PASS,
+7 Features,snap_days between 0 and 7,PASS,
+8 Raw match,weekly sales = sum of raw daily sales (8 sampled series),PASS,8/8 match
+8 Raw match,sell_price matches the raw price file,PASS,8/8 match
+8 Raw match,event weeks match the raw calendar,PASS,8/8 match
+9 Log,data_quality_log.csv exists,PASS,
+9 Log,logged 'final series' = series in the file,PASS,"log=129.0, file=129"
+9 Log,logged 'final rows' = rows in the file,PASS,"log=35733.0, file=35733"
