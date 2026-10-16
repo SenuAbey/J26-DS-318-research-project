@@ -1,0 +1,11 @@
+model,method,rows,coverage,width,interval_score
+LightGBM,CQR by category,20382,94.78,97.36,114.32
+LightGBM,CQR by horizon,20382,95.2,97.36,114.32
+LightGBM,CQR global,20382,95.1,97.35,114.33
+LightGBM,CQR rolling 26w,20382,95.8,97.41,114.31
+LightGBM,raw,20382,93.52,97.27,114.36
+TFT,CQR by category,20382,95.81,88.0,110.53
+TFT,CQR by horizon,20382,95.85,86.73,110.24
+TFT,CQR global,20382,95.94,86.78,110.3
+TFT,CQR rolling 26w,20382,95.59,86.08,110.33
+TFT,raw,20382,87.85,84.78,110.55
