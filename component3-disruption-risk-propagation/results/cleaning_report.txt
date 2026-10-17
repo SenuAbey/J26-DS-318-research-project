@@ -1,0 +1,15 @@
+1. Loaded raw file: 180519 rows x 53 columns
+   duplicate rows: 0 | duplicate Order Item Id: 0
+2. Dropped 11 columns (personal data, empty/constant, redundant): ['Customer Email', 'Customer Password', 'Customer Fname', 'Customer Lname', 'Customer Street', 'Customer Zipcode', 'Product Description', 'Product Status', 'Order Zipcode', 'Product Image', 'Benefit per order']
+   remaining missing values: 0
+3. Dates parsed: 2015-01-01 to 2018-01-31 | invalid/inconsistent rows removed: 0
+4. Removed cancelled / suspected-fraud orders: 7754 rows (4.3%) -> 172765 rows
+5. late flag vs (real days > scheduled days) agreement: 1.0000 | overall late rate: 0.5729
+6. Countries linked to more than one region: ['Estados Unidos'] - kept (valid, gives multiple Country->Region edges)
+7. Stripped whitespace and collapsed repeated spaces in text columns
+8. Order Item Profit Ratio: clipped 1248 values to [-1.750, 0.500]
+8. Order Profit Per Order: clipped 3442 values to [-412.565, 184.230]
+9. Leakage warning: 'Delivery Status', 'Late_delivery_risk', 'late', 'delay' describe the outcome. Use them only to build the label (future window) or past-window features, never as inputs for the same period.
+   'Days for shipment (scheduled)' is fully determined by 'Shipping Mode' (Same Day 0, First 1, Second 2, Standard 4) - keep one.
+10. Monthly volume: ~4987 orders/month until Sep 2017, ~2048/month after - keep in mind for time splits
+FINAL: 172765 rows x 46 columns | orders: 62897 | categories: 50 | countries: 164 | regions: 23
