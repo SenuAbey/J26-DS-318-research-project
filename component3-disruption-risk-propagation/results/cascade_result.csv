@@ -1,0 +1,89 @@
+,infection_prob,most_likely_via
+Country::Mozambique,0.675,Category::Cleats
+Country::Israel,0.669,Category::Cleats
+Country::Noruega,0.292,Category::Cleats
+Country::Senegal,0.254,Category::Cleats
+Country::Sudán,0.222,Category::Cleats
+Country::Kazajistán,0.2,Category::Cleats
+Country::Bangladés,0.19,Category::Cleats
+Country::Tanzania,0.18,Category::Cleats
+Country::Haití,0.174,Category::Cleats
+Country::Irlanda,0.172,Category::Cleats
+Country::Camerún,0.149,Category::Cleats
+Country::Angola,0.146,Category::Cleats
+Country::Bélgica,0.138,Category::Cleats
+Country::Singapur,0.136,Category::Cleats
+Country::Perú,0.123,Category::Cleats
+Country::Rumania,0.122,Category::Cleats
+Country::Malasia,0.116,Category::Cleats
+Country::Egipto,0.11,Category::Cleats
+Country::Venezuela,0.107,Category::Cleats
+Country::Argelia,0.106,Category::Cleats
+Country::Suecia,0.102,Category::Cleats
+Country::República Dominicana,0.1,Category::Cleats
+Country::Arabia Saudí,0.098,Category::Cleats
+Country::Myanmar (Birmania),0.098,Category::Cleats
+Country::Nueva Zelanda,0.098,Category::Cleats
+Country::Vietnam,0.097,Category::Cleats
+Country::Nicaragua,0.096,Category::Cleats
+Country::México,0.096,Category::Cleats
+Country::Turquía,0.095,Category::Cleats
+Country::Austria,0.094,Category::Cleats
+Country::Alemania,0.094,Category::Cleats
+Country::Indonesia,0.094,Category::Cleats
+Country::Panamá,0.094,Category::Cleats
+Country::España,0.093,Category::Cleats
+Country::Irán,0.092,Category::Cleats
+Country::Argentina,0.091,Category::Cleats
+Country::Francia,0.091,Category::Cleats
+Country::Rusia,0.091,Category::Cleats
+Country::República Democrática del Congo,0.09,Category::Cleats
+Country::Brasil,0.09,Category::Cleats
+Country::Marruecos,0.09,Category::Cleats
+Region::East Africa,0.089,Country::Mozambique
+Country::Tailandia,0.089,Category::Cleats
+Country::Honduras,0.088,Category::Cleats
+Country::Corea del Sur,0.088,Category::Cleats
+Country::Estados Unidos,0.087,Category::Cleats
+Country::Colombia,0.087,Category::Cleats
+Country::Irak,0.087,Category::Cleats
+Country::Nigeria,0.086,Category::Cleats
+Country::India,0.086,Category::Cleats
+Country::Italia,0.085,Category::Cleats
+Country::Australia,0.085,Category::Cleats
+Country::Países Bajos,0.085,Category::Cleats
+Country::Cuba,0.084,Category::Cleats
+Country::Ucrania,0.084,Category::Cleats
+Country::Pakistán,0.083,Category::Cleats
+Country::Canada,0.082,Category::Cleats
+Country::El Salvador,0.081,Category::Cleats
+Country::China,0.079,Category::Cleats
+Country::Reino Unido,0.076,Category::Cleats
+Country::Japón,0.075,Category::Cleats
+Country::Polonia,0.074,Category::Cleats
+Country::Filipinas,0.073,Category::Cleats
+Country::Guatemala,0.072,Category::Cleats
+Country::SudAfrica,0.072,Category::Cleats
+Region::Central Asia,0.066,Country::Kazajistán
+Country::Chile,0.065,Category::Cleats
+Region::West Asia,0.062,Country::Turquía
+Region::Central Africa,0.062,Country::República Democrática del Congo
+Region::North Africa,0.058,Country::Egipto
+Region::Southeast Asia,0.056,Country::Indonesia
+Region::US Center,0.054,Country::Estados Unidos
+Region::Western Europe,0.052,Country::Francia
+Region::Northern Europe,0.052,Country::Reino Unido
+Region::Central America,0.052,Country::México
+Region::South America,0.051,Country::Brasil
+Region::South of USA,0.05,Country::Estados Unidos
+Region::Oceania,0.05,Country::Australia
+Region::Caribbean,0.048,Country::República Dominicana
+Region::South Asia,0.048,Country::India
+Region::West of USA,0.046,Country::Estados Unidos
+Region::East of USA,0.046,Country::Estados Unidos
+Region::Southern Europe,0.045,Country::España
+Region::Eastern Europe,0.044,Country::Rumania
+Region::West Africa,0.042,Country::Nigeria
+Region::Canada,0.042,Country::Canada
+Region::Eastern Asia,0.038,Country::China
+Region::Southern Africa,0.037,Country::SudAfrica
