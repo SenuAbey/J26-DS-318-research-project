@@ -1,0 +1,8 @@
+model,accuracy_mean,accuracy_std,precision_mean,precision_std,recall_mean,recall_std,f1_mean,f1_std
+LogisticRegression,0.554,0.078,0.553,0.073,0.594,0.147,0.567,0.103
+RandomForest,0.694,0.057,0.696,0.074,0.723,0.097,0.704,0.057
+NbrMean+LogisticRegression,0.694,0.079,0.678,0.075,0.767,0.115,0.715,0.078
+NbrMean+RandomForest,0.72,0.074,0.715,0.086,0.754,0.141,0.727,0.088
+GCN,0.671,0.082,0.668,0.082,0.723,0.173,0.683,0.092
+GraphSAGE,0.707,0.103,0.719,0.129,0.745,0.144,0.719,0.095
+GAT,0.705,0.08,0.7,0.083,0.741,0.197,0.706,0.115

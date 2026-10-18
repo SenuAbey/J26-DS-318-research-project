@@ -1,0 +1,831 @@
+repeat,node,y_true,pred_LogisticRegression,pred_RandomForest,pred_NbrMean+LogisticRegression,pred_NbrMean+RandomForest,pred_GCN,pred_GraphSAGE,pred_GAT
+0,Category::Books,1,0.0,0.0,0.0,0.0,0,0,0
+0,Category::Camping & Hiking,1,1.0,0.0,1.0,1.0,1,0,1
+0,Category::Children's Clothing,1,0.0,0.0,0.0,0.0,0,0,0
+0,Category::Crafts,1,0.0,1.0,0.0,0.0,0,0,0
+0,Category::Golf Shoes,0,0.0,1.0,0.0,1.0,0,0,1
+0,Category::Kids' Golf Clubs,0,0.0,0.0,1.0,1.0,0,0,1
+0,Category::Pet Supplies,1,0.0,0.0,0.0,0.0,1,0,1
+0,Category::Soccer,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Alemania,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Angola,0,1.0,0.0,0.0,0.0,1,0,1
+0,Country::Argelia,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Barbados,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Bulgaria,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Camerún,0,0.0,0.0,0.0,0.0,1,0,0
+0,Country::Canada,1,1.0,0.0,1.0,0.0,1,1,0
+0,Country::Corea del Sur,1,0.0,0.0,1.0,1.0,1,1,0
+0,Country::Filipinas,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Guatemala,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Indonesia,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Irán,0,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Israel,0,1.0,0.0,0.0,0.0,0,0,0
+0,Country::Italia,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Pakistán,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::República Checa,0,1.0,0.0,0.0,0.0,0,0,0
+0,Country::Somalia,0,1.0,0.0,0.0,0.0,1,0,0
+0,Country::Tanzania,0,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Zimbabue,0,0.0,0.0,0.0,0.0,0,0,0
+0,Region::Caribbean,1,0.0,0.0,0.0,1.0,0,0,1
+0,Region::Central Asia,0,0.0,0.0,1.0,0.0,0,0,0
+0,Region::East Africa,1,0.0,1.0,1.0,1.0,0,1,0
+0,Region::East of USA,0,0.0,1.0,0.0,0.0,0,0,0
+0,Region::Eastern Asia,0,0.0,0.0,1.0,1.0,0,0,0
+0,Region::Southern Africa,0,0.0,1.0,0.0,0.0,0,0,1
+0,Region::West Asia,1,0.0,0.0,1.0,1.0,0,0,0
+0,Category::CDs,1,1.0,0.0,0.0,0.0,0,0,0
+0,Category::Cleats,1,1.0,0.0,1.0,1.0,1,1,1
+0,Category::DVDs,0,0.0,0.0,1.0,0.0,0,1,0
+0,Category::Golf Balls,0,1.0,1.0,1.0,0.0,1,1,1
+0,Category::Indoor/Outdoor Games,1,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Sporting Goods,1,0.0,1.0,1.0,1.0,1,1,1
+0,Category::Strength Training,0,0.0,0.0,0.0,0.0,0,0,0
+0,Category::Toys,0,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Water Sports,0,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Women's Apparel,1,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Women's Clothing,0,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Australia,1,1.0,0.0,1.0,0.0,0,1,1
+0,Country::Bangladés,0,1.0,1.0,1.0,1.0,0,1,1
+0,Country::Bolivia,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Egipto,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::España,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Haití,1,0.0,0.0,1.0,1.0,1,0,1
+0,Country::Honduras,0,1.0,0.0,1.0,1.0,1,1,1
+0,Country::Kenia,0,1.0,0.0,1.0,0.0,0,0,1
+0,Country::Libia,0,1.0,0.0,0.0,0.0,0,0,0
+0,Country::Martinica,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Mozambique,0,1.0,0.0,0.0,0.0,0,0,0
+0,Country::Países Bajos,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Polonia,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::República Democrática del Congo,1,1.0,0.0,1.0,1.0,1,1,1
+0,Country::Sudán,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Suecia,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Togo,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Zambia,1,0.0,0.0,0.0,0.0,0,0,0
+0,Region::Central America,1,1.0,1.0,1.0,1.0,1,1,1
+0,Region::North Africa,1,0.0,1.0,0.0,0.0,0,0,0
+0,Region::South Asia,1,1.0,1.0,1.0,1.0,0,1,1
+0,Region::US Center,0,0.0,1.0,0.0,0.0,0,0,0
+0,Category::Cameras,0,1.0,1.0,1.0,1.0,0,1,1
+0,Category::Fishing,1,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Garden,1,0.0,0.0,0.0,0.0,0,1,1
+0,Category::Golf Apparel,0,0.0,0.0,0.0,1.0,0,0,1
+0,Category::Golf Gloves,1,0.0,1.0,0.0,0.0,0,1,0
+0,Category::Men's Clothing,0,1.0,0.0,1.0,0.0,1,1,1
+0,Category::Men's Golf Clubs,1,0.0,0.0,0.0,0.0,0,0,0
+0,Category::Music,1,0.0,1.0,0.0,1.0,0,1,1
+0,Category::Shop By Sport,0,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Tennis & Racquet,1,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Argentina,1,0.0,1.0,1.0,1.0,1,0,1
+0,Country::Austria,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Brasil,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::China,0,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Ghana,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::India,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Irlanda,0,1.0,1.0,1.0,1.0,0,1,0
+0,Country::Japón,0,1.0,0.0,1.0,1.0,1,1,1
+0,Country::Lituania,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Madagascar,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Mali,0,1.0,0.0,0.0,0.0,0,0,0
+0,Country::Marruecos,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Nicaragua,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Nigeria,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Níger,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Perú,1,1.0,1.0,1.0,1.0,1,0,1
+0,Country::Portugal,0,0.0,0.0,0.0,0.0,1,0,0
+0,Country::Reino Unido,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::República Dominicana,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Uruguay,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Vietnam,1,1.0,1.0,1.0,1.0,1,1,1
+0,Region::South of USA,0,1.0,1.0,0.0,0.0,0,0,0
+0,Region::West Africa,0,0.0,1.0,1.0,0.0,0,0,0
+0,Category::Baseball & Softball,0,0.0,1.0,0.0,0.0,0,1,1
+0,Category::Boxing & MMA,1,0.0,0.0,0.0,0.0,0,0,1
+0,Category::Computers,0,1.0,0.0,1.0,0.0,0,1,1
+0,Category::Consumer Electronics,0,0.0,1.0,1.0,1.0,1,0,1
+0,Category::Electronics,1,0.0,1.0,1.0,1.0,1,1,1
+0,Category::Girls' Apparel,0,0.0,1.0,1.0,1.0,1,1,1
+0,Category::Hockey,1,0.0,0.0,0.0,0.0,0,0,1
+0,Category::Hunting & Shooting,1,0.0,0.0,0.0,0.0,0,0,1
+0,Category::Video Games,0,0.0,0.0,0.0,0.0,1,0,1
+0,Category::Women's Golf Clubs,0,0.0,0.0,1.0,0.0,0,1,1
+0,Country::Afganistán,0,1.0,0.0,0.0,0.0,1,0,0
+0,Country::Camboya,0,1.0,0.0,0.0,0.0,1,0,0
+0,Country::Chile,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Cuba,1,1.0,0.0,0.0,0.0,1,0,1
+0,Country::Dinamarca,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Ecuador,1,1.0,0.0,1.0,0.0,1,1,0
+0,Country::Estados Unidos,1,1.0,1.0,1.0,0.0,1,1,1
+0,Country::Finlandia,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Francia,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Irak,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Jamaica,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Kazajistán,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::México,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Noruega,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::SudAfrica,1,0.0,0.0,1.0,1.0,0,1,1
+0,Country::Turquía,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Ucrania,1,0.0,1.0,1.0,1.0,1,1,1
+0,Region::Canada,0,0.0,1.0,0.0,0.0,0,1,1
+0,Region::Central Africa,1,0.0,1.0,1.0,0.0,0,1,0
+0,Region::Oceania,0,1.0,1.0,1.0,1.0,0,1,1
+0,Region::Southeast Asia,1,1.0,1.0,1.0,1.0,1,1,1
+0,Region::West of USA,0,0.0,1.0,0.0,0.0,0,0,0
+0,Region::Western Europe,1,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Accessories,1,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Baby,0,0.0,0.0,0.0,0.0,1,0,0
+0,Category::Cardio Equipment,1,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Fitness Accessories,0,1.0,0.0,0.0,0.0,1,0,1
+0,Category::Health and Beauty,1,1.0,1.0,0.0,1.0,0,0,1
+0,Category::Lacrosse,1,1.0,1.0,1.0,0.0,1,1,1
+0,Category::Men's Footwear,0,1.0,1.0,1.0,1.0,1,1,1
+0,Category::Trade-In,0,1.0,1.0,1.0,1.0,1,0,1
+0,Country::Arabia Saudí,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Bielorrusia,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Bélgica,1,0.0,0.0,1.0,1.0,1,1,1
+0,Country::Colombia,0,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Costa de Marfil,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::El Salvador,1,1.0,1.0,1.0,1.0,1,1,1
+0,Country::Hungría,0,1.0,0.0,0.0,0.0,0,0,0
+0,Country::Jordania,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Malasia,0,1.0,0.0,1.0,1.0,1,1,1
+0,Country::Myanmar (Birmania),1,0.0,0.0,1.0,0.0,1,0,1
+0,Country::Nueva Zelanda,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Panamá,0,1.0,1.0,1.0,1.0,1,0,1
+0,Country::Rumania,1,0.0,0.0,1.0,1.0,1,1,1
+0,Country::Rusia,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Senegal,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Singapur,0,0.0,1.0,0.0,0.0,1,1,1
+0,Country::Suiza,0,0.0,0.0,0.0,0.0,1,0,1
+0,Country::Tailandia,1,0.0,1.0,1.0,1.0,1,1,1
+0,Country::Trinidad y Tobago,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Uzbekistán,0,0.0,0.0,0.0,0.0,0,0,0
+0,Country::Venezuela,1,0.0,0.0,1.0,1.0,1,1,1
+0,Region::Eastern Europe,0,0.0,1.0,1.0,1.0,0,1,0
+0,Region::Northern Europe,1,1.0,1.0,1.0,0.0,0,0,0
+0,Region::South America,1,1.0,1.0,1.0,1.0,1,1,1
+0,Region::Southern Europe,1,1.0,1.0,0.0,1.0,0,0,0
+1,Category::Children's Clothing,1,0.0,0.0,0.0,0.0,0,0,0
+1,Category::Cleats,1,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Crafts,1,0.0,0.0,0.0,0.0,1,0,0
+1,Category::Garden,1,0.0,1.0,1.0,1.0,1,1,1
+1,Category::Girls' Apparel,0,1.0,1.0,1.0,1.0,1,1,0
+1,Category::Hockey,1,1.0,1.0,0.0,0.0,1,1,1
+1,Category::Kids' Golf Clubs,0,0.0,1.0,1.0,1.0,0,1,0
+1,Category::Lacrosse,1,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Soccer,0,0.0,0.0,0.0,0.0,0,0,0
+1,Category::Video Games,0,1.0,0.0,1.0,1.0,1,0,1
+1,Category::Women's Clothing,0,0.0,1.0,1.0,1.0,1,0,1
+1,Country::Austria,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Chile,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::China,0,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Costa de Marfil,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Ecuador,1,1.0,0.0,1.0,0.0,1,0,0
+1,Country::Egipto,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::España,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Honduras,0,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Irlanda,0,1.0,0.0,1.0,1.0,1,0,0
+1,Country::Nigeria,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Polonia,1,0.0,0.0,1.0,1.0,1,0,1
+1,Country::República Democrática del Congo,1,1.0,0.0,1.0,1.0,1,1,1
+1,Country::Senegal,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Somalia,0,1.0,0.0,0.0,0.0,0,0,0
+1,Country::Uzbekistán,0,0.0,0.0,0.0,0.0,0,0,0
+1,Region::Central Africa,1,1.0,1.0,1.0,0.0,0,1,1
+1,Region::Central Asia,0,0.0,0.0,0.0,0.0,0,1,0
+1,Region::Northern Europe,1,1.0,1.0,1.0,1.0,0,1,0
+1,Region::Oceania,0,1.0,1.0,1.0,1.0,0,1,1
+1,Region::Southern Africa,0,0.0,1.0,0.0,0.0,0,0,0
+1,Region::Southern Europe,1,1.0,1.0,0.0,1.0,0,0,0
+1,Region::US Center,0,1.0,1.0,0.0,0.0,0,0,0
+1,Region::West of USA,0,1.0,1.0,0.0,0.0,0,0,0
+1,Category::Accessories,1,1.0,1.0,1.0,1.0,1,1,0
+1,Category::Books,1,0.0,0.0,1.0,0.0,0,0,0
+1,Category::Fishing,1,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Golf Shoes,0,0.0,1.0,0.0,1.0,0,1,0
+1,Category::Health and Beauty,1,0.0,1.0,0.0,1.0,0,0,1
+1,Category::Men's Footwear,0,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Men's Golf Clubs,1,0.0,0.0,0.0,0.0,0,0,0
+1,Category::Tennis & Racquet,1,0.0,0.0,0.0,0.0,1,1,1
+1,Category::Trade-In,0,0.0,1.0,1.0,1.0,0,1,0
+1,Country::Afganistán,0,1.0,0.0,0.0,0.0,1,0,0
+1,Country::Alemania,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Angola,0,1.0,0.0,1.0,0.0,1,0,1
+1,Country::Australia,1,1.0,1.0,1.0,0.0,1,1,0
+1,Country::Bangladés,0,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Bielorrusia,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Bélgica,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Filipinas,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Ghana,0,1.0,0.0,1.0,0.0,0,0,0
+1,Country::Guatemala,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::India,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Italia,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Lituania,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Madagascar,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Marruecos,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Martinica,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Tailandia,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Tanzania,0,1.0,1.0,0.0,0.0,1,1,1
+1,Country::Trinidad y Tobago,0,1.0,0.0,0.0,0.0,0,0,0
+1,Country::Ucrania,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Uruguay,0,0.0,0.0,0.0,0.0,0,0,0
+1,Region::Canada,0,0.0,0.0,1.0,0.0,0,1,0
+1,Region::East of USA,0,1.0,1.0,0.0,0.0,0,0,0
+1,Region::Southeast Asia,1,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Cardio Equipment,1,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Electronics,1,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Golf Apparel,0,0.0,0.0,0.0,0.0,1,0,1
+1,Category::Golf Balls,0,0.0,1.0,1.0,0.0,1,0,1
+1,Category::Golf Gloves,1,0.0,0.0,1.0,0.0,1,0,0
+1,Category::Hunting & Shooting,1,0.0,0.0,0.0,1.0,1,1,1
+1,Category::Music,1,0.0,1.0,1.0,1.0,1,0,1
+1,Category::Sporting Goods,1,0.0,1.0,0.0,1.0,1,1,1
+1,Category::Strength Training,0,0.0,0.0,0.0,0.0,0,0,0
+1,Category::Toys,0,0.0,1.0,1.0,1.0,1,0,1
+1,Category::Women's Golf Clubs,0,0.0,0.0,1.0,0.0,1,0,1
+1,Country::Arabia Saudí,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Argentina,1,0.0,0.0,1.0,1.0,1,1,1
+1,Country::Brasil,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Bulgaria,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Canada,1,0.0,0.0,1.0,1.0,1,1,1
+1,Country::El Salvador,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Estados Unidos,1,1.0,1.0,1.0,0.0,1,1,1
+1,Country::Hungría,0,1.0,0.0,0.0,0.0,0,0,0
+1,Country::Jamaica,0,0.0,0.0,0.0,0.0,1,0,0
+1,Country::Libia,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Noruega,0,0.0,0.0,0.0,0.0,1,0,0
+1,Country::Panamá,0,0.0,0.0,1.0,0.0,1,1,1
+1,Country::Portugal,0,0.0,0.0,0.0,0.0,1,0,0
+1,Country::Reino Unido,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::República Checa,0,1.0,0.0,0.0,0.0,0,0,0
+1,Country::Rusia,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Singapur,0,0.0,0.0,0.0,0.0,1,1,0
+1,Country::Venezuela,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Vietnam,1,1.0,0.0,1.0,1.0,1,0,1
+1,Country::Zambia,1,0.0,0.0,0.0,0.0,1,0,0
+1,Region::Eastern Asia,0,1.0,0.0,1.0,1.0,1,1,1
+1,Region::South of USA,0,0.0,1.0,0.0,0.0,0,0,0
+1,Category::Baby,0,0.0,0.0,0.0,0.0,0,0,1
+1,Category::Baseball & Softball,0,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Boxing & MMA,1,1.0,1.0,1.0,1.0,1,1,1
+1,Category::CDs,1,0.0,0.0,0.0,0.0,0,0,1
+1,Category::Cameras,0,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Camping & Hiking,1,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Computers,0,1.0,0.0,1.0,1.0,1,0,1
+1,Category::DVDs,0,0.0,0.0,1.0,1.0,0,1,1
+1,Category::Men's Clothing,0,1.0,0.0,0.0,0.0,0,1,1
+1,Category::Shop By Sport,0,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Water Sports,0,1.0,1.0,1.0,1.0,1,1,1
+1,Category::Women's Apparel,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Cuba,1,1.0,0.0,1.0,0.0,1,1,1
+1,Country::Dinamarca,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Finlandia,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Indonesia,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Irak,1,0.0,0.0,1.0,1.0,1,1,1
+1,Country::Jordania,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Kenia,0,0.0,0.0,1.0,0.0,1,1,0
+1,Country::Mali,0,1.0,0.0,0.0,0.0,0,0,0
+1,Country::Myanmar (Birmania),1,0.0,0.0,1.0,1.0,1,1,1
+1,Country::México,1,1.0,1.0,1.0,1.0,1,1,0
+1,Country::Nicaragua,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Nueva Zelanda,1,0.0,0.0,1.0,1.0,0,1,1
+1,Country::Países Bajos,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::República Dominicana,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Rumania,1,0.0,0.0,1.0,1.0,1,1,1
+1,Country::Sudán,0,0.0,0.0,0.0,0.0,0,1,0
+1,Country::Suecia,1,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Togo,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Turquía,1,1.0,1.0,1.0,1.0,1,1,1
+1,Region::West Africa,0,0.0,0.0,1.0,0.0,0,1,0
+1,Region::West Asia,1,1.0,0.0,1.0,0.0,0,1,1
+1,Category::Consumer Electronics,0,0.0,1.0,0.0,1.0,0,0,1
+1,Category::Fitness Accessories,0,0.0,0.0,0.0,0.0,0,1,1
+1,Category::Indoor/Outdoor Games,1,1.0,1.0,1.0,1.0,0,1,1
+1,Category::Pet Supplies,1,1.0,0.0,1.0,1.0,1,0,0
+1,Country::Argelia,1,0.0,0.0,1.0,1.0,1,1,1
+1,Country::Barbados,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Bolivia,0,1.0,0.0,0.0,0.0,0,0,0
+1,Country::Camboya,0,1.0,0.0,0.0,0.0,0,0,1
+1,Country::Camerún,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Colombia,0,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Corea del Sur,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Francia,1,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Haití,1,0.0,0.0,1.0,1.0,1,0,1
+1,Country::Irán,0,0.0,1.0,1.0,1.0,1,1,1
+1,Country::Israel,0,1.0,0.0,0.0,0.0,0,0,0
+1,Country::Japón,0,0.0,0.0,1.0,1.0,1,1,1
+1,Country::Kazajistán,0,0.0,0.0,0.0,0.0,0,0,0
+1,Country::Malasia,0,1.0,1.0,1.0,1.0,1,1,1
+1,Country::Mozambique,0,1.0,0.0,1.0,0.0,0,0,0
+1,Country::Níger,0,1.0,0.0,0.0,0.0,0,0,0
+1,Country::Pakistán,1,1.0,1.0,1.0,1.0,0,1,1
+1,Country::Perú,1,0.0,0.0,1.0,1.0,1,1,1
+1,Country::SudAfrica,1,0.0,0.0,1.0,1.0,0,1,0
+1,Country::Suiza,0,0.0,0.0,0.0,0.0,1,0,0
+1,Country::Zimbabue,0,0.0,0.0,0.0,0.0,0,0,0
+1,Region::Caribbean,1,0.0,0.0,0.0,0.0,0,0,0
+1,Region::Central America,1,1.0,1.0,1.0,1.0,0,1,1
+1,Region::East Africa,1,0.0,1.0,1.0,1.0,0,0,0
+1,Region::Eastern Europe,0,0.0,1.0,0.0,0.0,0,1,0
+1,Region::North Africa,1,0.0,1.0,1.0,0.0,0,0,0
+1,Region::South America,1,1.0,1.0,1.0,1.0,1,1,1
+1,Region::South Asia,1,0.0,1.0,1.0,1.0,0,1,0
+1,Region::Western Europe,1,1.0,1.0,1.0,1.0,0,1,1
+2,Category::Baby,0,0.0,0.0,0.0,0.0,1,0,0
+2,Category::Cameras,0,0.0,1.0,0.0,1.0,1,1,1
+2,Category::Camping & Hiking,1,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Consumer Electronics,0,0.0,1.0,0.0,1.0,1,1,1
+2,Category::Crafts,1,0.0,1.0,0.0,1.0,1,1,1
+2,Category::Indoor/Outdoor Games,1,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Lacrosse,1,1.0,1.0,1.0,0.0,0,0,1
+2,Category::Men's Clothing,0,0.0,0.0,0.0,0.0,1,0,0
+2,Category::Pet Supplies,1,0.0,0.0,0.0,0.0,1,0,1
+2,Category::Shop By Sport,0,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Women's Clothing,0,0.0,1.0,0.0,0.0,1,0,0
+2,Country::Camboya,0,1.0,0.0,0.0,0.0,1,0,0
+2,Country::Camerún,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Chile,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Colombia,0,0.0,0.0,1.0,1.0,1,1,1
+2,Country::Cuba,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Ecuador,1,1.0,0.0,1.0,0.0,1,1,0
+2,Country::Egipto,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::El Salvador,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::España,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Francia,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Guatemala,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Lituania,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Nigeria,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::Panamá,0,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Países Bajos,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::República Dominicana,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Singapur,0,0.0,0.0,0.0,0.0,1,0,1
+2,Country::Suiza,0,0.0,0.0,0.0,0.0,1,0,1
+2,Country::Zimbabue,0,1.0,0.0,0.0,0.0,0,0,0
+2,Region::Canada,0,0.0,1.0,1.0,1.0,0,1,0
+2,Region::Central Asia,0,0.0,1.0,0.0,0.0,0,1,0
+2,Region::US Center,0,1.0,1.0,0.0,0.0,0,0,0
+2,Region::West Asia,1,1.0,1.0,1.0,1.0,1,1,0
+2,Category::Books,1,0.0,0.0,0.0,0.0,0,0,0
+2,Category::CDs,1,0.0,0.0,0.0,0.0,0,0,0
+2,Category::Golf Apparel,0,0.0,0.0,0.0,0.0,1,0,0
+2,Category::Golf Shoes,0,0.0,1.0,0.0,1.0,1,1,1
+2,Category::Health and Beauty,1,0.0,1.0,0.0,1.0,0,1,1
+2,Category::Kids' Golf Clubs,0,0.0,0.0,0.0,0.0,0,1,1
+2,Category::Men's Golf Clubs,1,0.0,0.0,0.0,0.0,0,0,0
+2,Category::Toys,0,0.0,0.0,0.0,0.0,0,0,0
+2,Category::Water Sports,0,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Afganistán,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Argentina,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Bulgaria,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Canada,1,0.0,0.0,0.0,0.0,0,0,1
+2,Country::Estados Unidos,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Finlandia,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Hungría,0,1.0,0.0,0.0,0.0,0,0,0
+2,Country::Libia,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Marruecos,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::Noruega,0,0.0,0.0,0.0,0.0,0,1,0
+2,Country::Perú,1,0.0,0.0,1.0,1.0,1,1,1
+2,Country::República Checa,0,1.0,0.0,0.0,0.0,0,0,0
+2,Country::República Democrática del Congo,1,1.0,0.0,1.0,1.0,1,1,1
+2,Country::Rumania,1,1.0,0.0,1.0,1.0,1,1,1
+2,Country::Rusia,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::Senegal,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Zambia,1,0.0,0.0,0.0,0.0,0,0,0
+2,Region::Caribbean,1,1.0,1.0,1.0,1.0,0,0,0
+2,Region::Central America,1,1.0,1.0,1.0,1.0,1,1,1
+2,Region::East Africa,1,0.0,1.0,1.0,1.0,0,0,0
+2,Region::East of USA,0,1.0,1.0,0.0,0.0,0,0,0
+2,Region::Southeast Asia,1,1.0,1.0,1.0,1.0,1,1,1
+2,Region::West Africa,0,0.0,1.0,0.0,0.0,0,0,0
+2,Region::West of USA,0,1.0,1.0,0.0,0.0,0,0,0
+2,Category::Boxing & MMA,1,1.0,1.0,1.0,1.0,1,0,1
+2,Category::Cleats,1,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Fitness Accessories,0,1.0,0.0,0.0,0.0,1,0,1
+2,Category::Garden,1,0.0,1.0,0.0,0.0,1,1,1
+2,Category::Golf Gloves,1,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Hockey,1,1.0,1.0,0.0,0.0,1,1,1
+2,Category::Men's Footwear,0,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Soccer,0,0.0,0.0,0.0,0.0,1,0,1
+2,Category::Sporting Goods,1,1.0,1.0,0.0,1.0,1,1,0
+2,Category::Trade-In,0,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Video Games,0,1.0,1.0,1.0,0.0,1,1,1
+2,Country::Alemania,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Bangladés,0,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Bielorrusia,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::China,0,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Dinamarca,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Filipinas,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Ghana,0,0.0,0.0,1.0,0.0,0,0,0
+2,Country::Indonesia,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Irlanda,0,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Kazajistán,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Mali,0,1.0,0.0,0.0,0.0,0,0,0
+2,Country::Myanmar (Birmania),1,0.0,0.0,1.0,1.0,1,0,1
+2,Country::México,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Nicaragua,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Pakistán,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Reino Unido,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Somalia,0,1.0,0.0,0.0,0.0,1,0,0
+2,Country::SudAfrica,1,0.0,0.0,1.0,1.0,1,0,1
+2,Country::Togo,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Trinidad y Tobago,0,0.0,0.0,0.0,0.0,0,0,0
+2,Region::Southern Europe,1,1.0,1.0,1.0,1.0,1,1,1
+2,Region::Western Europe,1,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Accessories,1,0.0,0.0,0.0,0.0,0,0,1
+2,Category::Baseball & Softball,0,0.0,0.0,0.0,0.0,1,0,1
+2,Category::Computers,0,1.0,1.0,1.0,1.0,0,1,1
+2,Category::DVDs,0,0.0,1.0,0.0,1.0,1,0,1
+2,Category::Hunting & Shooting,1,0.0,0.0,0.0,0.0,1,0,1
+2,Category::Tennis & Racquet,1,0.0,0.0,0.0,0.0,0,0,0
+2,Category::Women's Apparel,1,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Women's Golf Clubs,0,0.0,0.0,0.0,0.0,1,1,1
+2,Country::Arabia Saudí,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Argelia,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::Australia,1,1.0,1.0,1.0,0.0,0,1,1
+2,Country::Austria,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Brasil,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Bélgica,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Irán,0,0.0,1.0,1.0,1.0,1,1,1
+2,Country::Israel,0,1.0,0.0,0.0,0.0,1,0,0
+2,Country::Jamaica,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Madagascar,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Malasia,0,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Martinica,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Mozambique,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Polonia,1,0.0,0.0,1.0,1.0,1,1,1
+2,Country::Sudán,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Venezuela,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::Vietnam,1,0.0,0.0,1.0,1.0,1,0,1
+2,Region::Central Africa,1,0.0,1.0,1.0,1.0,0,1,0
+2,Region::Eastern Asia,0,1.0,1.0,1.0,1.0,1,1,0
+2,Region::Eastern Europe,0,1.0,1.0,1.0,1.0,0,0,0
+2,Region::North Africa,1,1.0,1.0,1.0,1.0,0,0,0
+2,Region::Northern Europe,1,1.0,1.0,1.0,1.0,0,0,1
+2,Region::Oceania,0,1.0,1.0,1.0,0.0,0,1,0
+2,Region::South America,1,1.0,1.0,1.0,1.0,1,1,0
+2,Region::Southern Africa,0,0.0,1.0,0.0,0.0,0,0,0
+2,Category::Cardio Equipment,1,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Children's Clothing,1,0.0,0.0,0.0,0.0,0,0,0
+2,Category::Electronics,1,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Fishing,1,1.0,1.0,1.0,1.0,1,0,1
+2,Category::Girls' Apparel,0,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Golf Balls,0,1.0,1.0,1.0,1.0,1,1,1
+2,Category::Music,1,0.0,1.0,1.0,1.0,1,1,1
+2,Category::Strength Training,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Angola,0,1.0,0.0,0.0,0.0,1,0,0
+2,Country::Barbados,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Bolivia,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Corea del Sur,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Costa de Marfil,0,1.0,0.0,0.0,0.0,1,0,0
+2,Country::Haití,1,0.0,0.0,1.0,1.0,1,0,1
+2,Country::Honduras,0,1.0,1.0,1.0,1.0,1,1,1
+2,Country::India,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Irak,1,0.0,0.0,1.0,1.0,1,0,1
+2,Country::Italia,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Japón,0,1.0,0.0,1.0,1.0,1,0,0
+2,Country::Jordania,0,0.0,0.0,0.0,0.0,0,0,0
+2,Country::Kenia,0,0.0,0.0,0.0,0.0,1,0,0
+2,Country::Nueva Zelanda,1,1.0,0.0,1.0,1.0,1,1,1
+2,Country::Níger,0,1.0,0.0,0.0,0.0,0,0,0
+2,Country::Portugal,0,0.0,0.0,0.0,0.0,1,0,1
+2,Country::Suecia,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Tailandia,1,0.0,1.0,1.0,1.0,1,1,1
+2,Country::Tanzania,0,1.0,1.0,1.0,0.0,1,1,1
+2,Country::Turquía,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Ucrania,1,1.0,1.0,1.0,1.0,1,1,1
+2,Country::Uruguay,0,1.0,0.0,0.0,0.0,0,0,0
+2,Country::Uzbekistán,0,0.0,0.0,0.0,0.0,0,0,0
+2,Region::South Asia,1,1.0,1.0,1.0,0.0,0,1,0
+2,Region::South of USA,0,0.0,1.0,0.0,0.0,0,0,0
+3,Category::Baby,0,0.0,0.0,0.0,0.0,0,0,0
+3,Category::Camping & Hiking,1,1.0,1.0,1.0,1.0,1,1,1
+3,Category::Children's Clothing,1,0.0,1.0,0.0,0.0,0,0,0
+3,Category::Golf Gloves,1,1.0,1.0,1.0,1.0,0,0,0
+3,Category::Golf Shoes,0,0.0,1.0,1.0,1.0,0,1,1
+3,Category::Indoor/Outdoor Games,1,1.0,1.0,1.0,1.0,1,1,1
+3,Category::Lacrosse,1,1.0,1.0,1.0,0.0,1,1,0
+3,Category::Men's Golf Clubs,1,0.0,0.0,0.0,0.0,0,0,0
+3,Category::Music,1,0.0,1.0,0.0,1.0,0,1,1
+3,Category::Shop By Sport,0,1.0,1.0,1.0,1.0,1,1,1
+3,Category::Tennis & Racquet,1,0.0,0.0,0.0,0.0,0,0,0
+3,Category::Trade-In,0,1.0,1.0,1.0,1.0,0,0,0
+3,Country::Brasil,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Egipto,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Finlandia,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Hungría,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::Japón,0,0.0,0.0,1.0,1.0,1,1,1
+3,Country::Kazajistán,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::Martinica,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Níger,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::Polonia,1,0.0,0.0,0.0,1.0,1,0,1
+3,Country::República Democrática del Congo,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Somalia,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::Uzbekistán,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Venezuela,1,0.0,1.0,1.0,1.0,1,0,1
+3,Region::Canada,0,0.0,0.0,0.0,0.0,0,0,0
+3,Region::Caribbean,1,1.0,1.0,1.0,1.0,0,1,1
+3,Region::Central America,1,1.0,1.0,1.0,1.0,1,1,1
+3,Region::Central Asia,0,0.0,0.0,0.0,1.0,0,1,0
+3,Region::Eastern Europe,0,0.0,1.0,1.0,1.0,0,1,1
+3,Region::North Africa,1,0.0,1.0,1.0,1.0,0,1,1
+3,Region::Northern Europe,1,1.0,1.0,1.0,0.0,0,1,0
+3,Region::West Africa,0,0.0,1.0,1.0,1.0,0,1,0
+3,Region::West of USA,0,1.0,1.0,0.0,0.0,0,0,0
+3,Category::Consumer Electronics,0,0.0,0.0,0.0,1.0,1,0,1
+3,Category::DVDs,0,0.0,0.0,1.0,0.0,1,0,0
+3,Category::Fitness Accessories,0,1.0,1.0,1.0,1.0,1,1,1
+3,Category::Health and Beauty,1,0.0,0.0,0.0,1.0,0,0,0
+3,Category::Pet Supplies,1,0.0,0.0,0.0,0.0,0,0,0
+3,Category::Soccer,0,0.0,0.0,0.0,0.0,0,0,0
+3,Category::Water Sports,0,1.0,1.0,1.0,1.0,1,1,1
+3,Category::Women's Golf Clubs,0,0.0,0.0,1.0,1.0,1,1,1
+3,Country::Alemania,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Canada,1,1.0,0.0,1.0,1.0,1,1,0
+3,Country::Colombia,0,0.0,1.0,1.0,1.0,1,1,1
+3,Country::Corea del Sur,1,0.0,0.0,1.0,1.0,1,1,0
+3,Country::Costa de Marfil,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Ecuador,1,1.0,0.0,1.0,0.0,0,0,0
+3,Country::El Salvador,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Estados Unidos,1,1.0,1.0,1.0,0.0,1,1,1
+3,Country::Honduras,0,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Indonesia,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Italia,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Jamaica,0,0.0,0.0,0.0,0.0,1,0,0
+3,Country::Libia,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::Mali,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::México,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Panamá,0,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Perú,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Senegal,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::SudAfrica,1,1.0,1.0,1.0,1.0,0,1,0
+3,Country::Suiza,0,0.0,0.0,0.0,0.0,1,0,0
+3,Country::Vietnam,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Zambia,1,0.0,0.0,0.0,0.0,0,1,0
+3,Region::South America,1,1.0,1.0,1.0,1.0,1,1,1
+3,Region::South of USA,0,0.0,1.0,0.0,0.0,0,0,0
+3,Region::Western Europe,1,1.0,1.0,1.0,1.0,1,1,1
+3,Category::Cameras,0,1.0,1.0,1.0,1.0,1,1,0
+3,Category::Fishing,1,1.0,1.0,1.0,1.0,1,1,1
+3,Category::Girls' Apparel,0,1.0,1.0,1.0,1.0,1,1,1
+3,Category::Golf Apparel,0,0.0,0.0,0.0,0.0,1,1,1
+3,Category::Men's Clothing,0,1.0,0.0,1.0,0.0,1,1,0
+3,Category::Sporting Goods,1,0.0,1.0,1.0,1.0,1,1,1
+3,Country::Angola,0,1.0,0.0,1.0,0.0,1,1,1
+3,Country::Arabia Saudí,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Bélgica,1,0.0,1.0,1.0,1.0,1,1,1
+3,Country::Cuba,1,1.0,0.0,1.0,1.0,1,1,0
+3,Country::Filipinas,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Ghana,0,0.0,0.0,1.0,0.0,1,1,0
+3,Country::India,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Irán,0,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Jordania,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::Marruecos,1,0.0,1.0,1.0,1.0,1,1,1
+3,Country::Mozambique,0,0.0,0.0,1.0,0.0,1,1,0
+3,Country::Nigeria,1,0.0,1.0,1.0,1.0,1,1,1
+3,Country::Noruega,0,0.0,0.0,0.0,0.0,1,1,0
+3,Country::Pakistán,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Portugal,0,0.0,0.0,0.0,0.0,1,0,1
+3,Country::Reino Unido,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::República Checa,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::Suecia,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Trinidad y Tobago,0,1.0,0.0,0.0,0.0,0,0,0
+3,Country::Uruguay,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Zimbabue,0,0.0,0.0,0.0,0.0,0,0,0
+3,Region::Central Africa,1,0.0,1.0,1.0,0.0,1,1,1
+3,Region::East Africa,1,0.0,1.0,1.0,1.0,0,1,0
+3,Region::South Asia,1,0.0,1.0,1.0,0.0,1,1,0
+3,Region::Southeast Asia,1,1.0,1.0,0.0,0.0,1,1,1
+3,Region::US Center,0,0.0,1.0,0.0,0.0,0,1,0
+3,Region::West Asia,1,0.0,1.0,0.0,0.0,0,1,1
+3,Category::Cardio Equipment,1,1.0,1.0,1.0,1.0,1,0,1
+3,Category::Computers,0,0.0,0.0,0.0,0.0,0,0,1
+3,Category::Crafts,1,0.0,0.0,0.0,0.0,1,1,1
+3,Category::Electronics,1,0.0,1.0,1.0,1.0,1,0,1
+3,Category::Garden,1,0.0,1.0,0.0,1.0,1,0,1
+3,Category::Golf Balls,0,0.0,1.0,1.0,1.0,1,0,1
+3,Category::Hockey,1,0.0,0.0,0.0,0.0,1,0,0
+3,Category::Men's Footwear,0,1.0,1.0,1.0,1.0,1,0,1
+3,Category::Video Games,0,1.0,0.0,1.0,0.0,1,1,1
+3,Category::Women's Clothing,0,0.0,0.0,0.0,0.0,1,0,1
+3,Country::Afganistán,0,1.0,0.0,0.0,0.0,1,0,0
+3,Country::Argentina,1,1.0,0.0,1.0,1.0,1,0,1
+3,Country::Australia,1,1.0,0.0,1.0,0.0,1,0,1
+3,Country::Barbados,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Bielorrusia,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Camboya,0,1.0,0.0,0.0,0.0,1,0,0
+3,Country::Camerún,0,0.0,0.0,0.0,0.0,1,0,0
+3,Country::España,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Haití,1,0.0,0.0,1.0,1.0,1,0,1
+3,Country::Irlanda,0,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Israel,0,1.0,0.0,0.0,0.0,1,0,0
+3,Country::Kenia,0,0.0,0.0,0.0,0.0,1,1,0
+3,Country::Malasia,0,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Myanmar (Birmania),1,1.0,0.0,1.0,1.0,1,0,1
+3,Country::Nicaragua,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Nueva Zelanda,1,0.0,0.0,1.0,1.0,1,0,1
+3,Country::República Dominicana,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Rumania,1,1.0,0.0,1.0,1.0,1,0,1
+3,Country::Rusia,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Tanzania,0,1.0,0.0,1.0,0.0,1,1,1
+3,Country::Turquía,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Ucrania,1,0.0,1.0,1.0,1.0,1,1,1
+3,Region::East of USA,0,1.0,1.0,0.0,0.0,0,0,0
+3,Category::Accessories,1,0.0,0.0,1.0,0.0,1,0,0
+3,Category::Baseball & Softball,0,0.0,0.0,1.0,1.0,0,0,0
+3,Category::Books,1,0.0,0.0,0.0,0.0,0,0,0
+3,Category::Boxing & MMA,1,0.0,0.0,0.0,0.0,0,0,1
+3,Category::CDs,1,0.0,0.0,0.0,0.0,0,0,0
+3,Category::Cleats,1,1.0,0.0,1.0,0.0,1,1,1
+3,Category::Hunting & Shooting,1,0.0,0.0,0.0,0.0,0,0,0
+3,Category::Kids' Golf Clubs,0,0.0,0.0,1.0,0.0,0,0,0
+3,Category::Strength Training,0,0.0,0.0,0.0,0.0,1,0,0
+3,Category::Toys,0,1.0,1.0,1.0,1.0,0,0,0
+3,Category::Women's Apparel,1,1.0,1.0,1.0,0.0,1,1,1
+3,Country::Argelia,1,0.0,1.0,1.0,1.0,1,1,1
+3,Country::Austria,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Bangladés,0,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Bolivia,0,0.0,0.0,0.0,0.0,1,0,0
+3,Country::Bulgaria,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Chile,1,0.0,1.0,1.0,1.0,1,1,1
+3,Country::China,0,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Dinamarca,0,0.0,0.0,0.0,0.0,1,0,0
+3,Country::Francia,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Guatemala,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Irak,1,0.0,1.0,1.0,1.0,1,1,1
+3,Country::Lituania,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Madagascar,0,0.0,0.0,0.0,0.0,0,0,0
+3,Country::Países Bajos,1,0.0,1.0,1.0,1.0,1,1,1
+3,Country::Singapur,0,0.0,1.0,0.0,0.0,1,1,1
+3,Country::Sudán,0,0.0,0.0,0.0,0.0,1,1,0
+3,Country::Tailandia,1,1.0,1.0,1.0,1.0,1,1,1
+3,Country::Togo,0,0.0,0.0,0.0,0.0,0,0,0
+3,Region::Eastern Asia,0,1.0,1.0,1.0,1.0,0,1,1
+3,Region::Oceania,0,1.0,1.0,1.0,1.0,0,1,0
+3,Region::Southern Africa,0,0.0,1.0,0.0,0.0,0,0,0
+3,Region::Southern Europe,1,1.0,1.0,1.0,1.0,0,1,0
+4,Category::Accessories,1,1.0,1.0,1.0,1.0,1,1,1
+4,Category::Crafts,1,0.0,1.0,0.0,0.0,0,1,1
+4,Category::Golf Apparel,0,1.0,0.0,1.0,1.0,1,1,1
+4,Category::Kids' Golf Clubs,0,1.0,0.0,1.0,1.0,0,1,1
+4,Category::Men's Clothing,0,1.0,0.0,0.0,0.0,0,1,0
+4,Category::Soccer,0,0.0,0.0,0.0,0.0,0,0,0
+4,Category::Trade-In,0,1.0,0.0,1.0,1.0,1,0,1
+4,Category::Water Sports,0,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Austria,1,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Bolivia,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::El Salvador,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::España,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Filipinas,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Guatemala,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Kenia,0,1.0,0.0,1.0,0.0,0,0,0
+4,Country::Libia,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Lituania,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Mali,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Myanmar (Birmania),1,0.0,0.0,1.0,0.0,1,0,1
+4,Country::Nueva Zelanda,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Níger,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Pakistán,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Senegal,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Suiza,0,0.0,0.0,0.0,0.0,1,1,0
+4,Country::Togo,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Ucrania,1,1.0,1.0,1.0,1.0,1,1,1
+4,Region::Central Africa,1,0.0,1.0,1.0,0.0,0,1,0
+4,Region::Eastern Europe,0,0.0,1.0,0.0,1.0,0,1,0
+4,Region::North Africa,1,0.0,1.0,0.0,0.0,0,0,1
+4,Region::Northern Europe,1,0.0,1.0,0.0,0.0,0,0,1
+4,Region::South Asia,1,0.0,1.0,1.0,1.0,0,1,1
+4,Region::Southern Europe,1,0.0,1.0,0.0,1.0,0,0,1
+4,Region::US Center,0,0.0,1.0,0.0,0.0,0,0,0
+4,Region::West Asia,1,0.0,1.0,1.0,1.0,0,1,0
+4,Category::Baby,0,0.0,0.0,0.0,0.0,0,0,1
+4,Category::CDs,1,0.0,0.0,0.0,0.0,0,0,1
+4,Category::Fitness Accessories,0,1.0,1.0,1.0,1.0,1,1,1
+4,Category::Hockey,1,1.0,0.0,0.0,0.0,1,0,1
+4,Category::Men's Golf Clubs,1,0.0,0.0,0.0,0.0,0,0,0
+4,Category::Shop By Sport,0,1.0,1.0,1.0,1.0,1,1,1
+4,Category::Video Games,0,1.0,0.0,1.0,0.0,1,0,1
+4,Country::Afganistán,0,0.0,0.0,0.0,0.0,1,0,0
+4,Country::Arabia Saudí,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Argentina,1,0.0,0.0,1.0,1.0,1,0,1
+4,Country::Australia,1,1.0,0.0,1.0,0.0,1,0,1
+4,Country::Bangladés,0,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Camboya,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Canada,1,0.0,0.0,1.0,0.0,1,0,1
+4,Country::Dinamarca,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Egipto,1,0.0,1.0,1.0,1.0,1,0,1
+4,Country::Estados Unidos,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Finlandia,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Francia,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Honduras,0,1.0,0.0,1.0,1.0,1,1,1
+4,Country::Irak,1,0.0,0.0,1.0,1.0,1,1,1
+4,Country::Irán,0,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Madagascar,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Martinica,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::México,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Nigeria,1,0.0,0.0,1.0,1.0,1,1,1
+4,Country::Perú,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::República Checa,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Uzbekistán,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Venezuela,1,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Vietnam,1,0.0,0.0,1.0,1.0,1,0,1
+4,Region::Central Asia,0,0.0,0.0,0.0,1.0,0,1,0
+4,Region::Southeast Asia,1,1.0,1.0,1.0,1.0,1,1,1
+4,Category::Boxing & MMA,1,0.0,0.0,0.0,1.0,1,0,0
+4,Category::Cleats,1,1.0,0.0,1.0,0.0,1,1,1
+4,Category::Computers,0,1.0,1.0,1.0,1.0,1,1,0
+4,Category::Indoor/Outdoor Games,1,1.0,0.0,1.0,0.0,1,0,1
+4,Category::Sporting Goods,1,1.0,1.0,1.0,1.0,1,1,1
+4,Category::Strength Training,0,1.0,0.0,0.0,0.0,0,0,0
+4,Category::Tennis & Racquet,1,0.0,0.0,0.0,0.0,0,0,0
+4,Category::Women's Apparel,1,1.0,0.0,1.0,0.0,1,0,1
+4,Category::Women's Clothing,0,0.0,1.0,1.0,1.0,1,1,0
+4,Country::Bielorrusia,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Chile,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Colombia,0,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Costa de Marfil,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Ecuador,1,1.0,0.0,0.0,0.0,1,1,0
+4,Country::Ghana,0,1.0,0.0,1.0,0.0,0,0,0
+4,Country::Haití,1,1.0,0.0,1.0,1.0,1,0,1
+4,Country::India,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Indonesia,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Italia,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Jamaica,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Jordania,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Malasia,0,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Mozambique,0,1.0,0.0,1.0,0.0,1,0,0
+4,Country::Noruega,0,1.0,1.0,1.0,0.0,0,1,1
+4,Country::Reino Unido,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::República Democrática del Congo,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Rusia,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Singapur,0,1.0,1.0,1.0,0.0,1,1,0
+4,Country::Turquía,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Zimbabue,0,0.0,0.0,0.0,0.0,0,0,0
+4,Region::Canada,0,0.0,1.0,1.0,0.0,0,1,0
+4,Region::South of USA,0,0.0,1.0,0.0,0.0,0,0,0
+4,Region::Western Europe,1,1.0,1.0,1.0,1.0,1,1,1
+4,Category::Books,1,0.0,0.0,0.0,0.0,0,0,0
+4,Category::Cameras,0,0.0,1.0,0.0,1.0,0,1,0
+4,Category::Camping & Hiking,1,1.0,1.0,0.0,1.0,1,0,1
+4,Category::Children's Clothing,1,0.0,0.0,0.0,0.0,0,0,0
+4,Category::DVDs,0,0.0,0.0,0.0,0.0,0,0,0
+4,Category::Fishing,1,1.0,1.0,0.0,1.0,1,0,1
+4,Category::Garden,1,0.0,0.0,0.0,0.0,0,1,1
+4,Category::Health and Beauty,1,0.0,1.0,0.0,1.0,0,1,1
+4,Category::Pet Supplies,1,0.0,0.0,0.0,0.0,0,0,1
+4,Category::Toys,0,0.0,0.0,1.0,1.0,0,1,1
+4,Country::Angola,0,1.0,0.0,0.0,0.0,1,0,1
+4,Country::Argelia,1,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Barbados,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Brasil,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Camerún,0,0.0,0.0,0.0,0.0,1,0,1
+4,Country::China,0,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Hungría,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Irlanda,0,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Marruecos,1,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Nicaragua,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Panamá,0,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Polonia,1,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Portugal,0,1.0,0.0,1.0,1.0,1,1,1
+4,Country::República Dominicana,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::SudAfrica,1,1.0,1.0,1.0,1.0,0,1,1
+4,Country::Suecia,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Tanzania,0,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Trinidad y Tobago,0,0.0,0.0,0.0,0.0,0,0,0
+4,Region::East Africa,1,0.0,1.0,1.0,1.0,0,1,0
+4,Region::East of USA,0,1.0,1.0,0.0,0.0,0,0,1
+4,Region::Eastern Asia,0,0.0,1.0,1.0,1.0,0,1,1
+4,Region::South America,1,1.0,1.0,1.0,1.0,0,1,1
+4,Region::Southern Africa,0,0.0,1.0,0.0,0.0,0,0,1
+4,Category::Baseball & Softball,0,0.0,1.0,0.0,1.0,1,1,1
+4,Category::Cardio Equipment,1,1.0,1.0,1.0,1.0,1,1,1
+4,Category::Consumer Electronics,0,0.0,1.0,1.0,1.0,1,1,1
+4,Category::Electronics,1,1.0,1.0,1.0,1.0,1,1,1
+4,Category::Girls' Apparel,0,0.0,1.0,1.0,1.0,1,1,1
+4,Category::Golf Balls,0,0.0,0.0,1.0,1.0,1,0,1
+4,Category::Golf Gloves,1,0.0,1.0,1.0,1.0,1,1,1
+4,Category::Golf Shoes,0,0.0,1.0,1.0,1.0,1,1,1
+4,Category::Hunting & Shooting,1,0.0,1.0,0.0,1.0,1,1,1
+4,Category::Lacrosse,1,0.0,1.0,0.0,1.0,1,0,1
+4,Category::Men's Footwear,0,1.0,1.0,1.0,1.0,1,0,1
+4,Category::Music,1,0.0,1.0,1.0,1.0,1,1,1
+4,Category::Women's Golf Clubs,0,0.0,0.0,1.0,0.0,0,1,1
+4,Country::Alemania,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Bulgaria,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Bélgica,1,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Corea del Sur,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Cuba,1,1.0,0.0,1.0,0.0,1,1,1
+4,Country::Israel,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Japón,0,0.0,0.0,1.0,1.0,1,1,1
+4,Country::Kazajistán,0,1.0,0.0,0.0,0.0,0,0,1
+4,Country::Países Bajos,1,1.0,1.0,1.0,1.0,1,1,1
+4,Country::Rumania,1,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Somalia,0,1.0,0.0,0.0,0.0,0,0,0
+4,Country::Sudán,0,0.0,0.0,0.0,0.0,0,0,1
+4,Country::Tailandia,1,0.0,1.0,1.0,1.0,1,1,1
+4,Country::Uruguay,0,0.0,0.0,0.0,0.0,0,0,0
+4,Country::Zambia,1,0.0,0.0,0.0,0.0,0,0,0
+4,Region::Caribbean,1,1.0,1.0,1.0,1.0,0,1,0
+4,Region::Central America,1,1.0,1.0,1.0,1.0,1,1,1
+4,Region::Oceania,0,1.0,1.0,1.0,1.0,1,1,1
+4,Region::West Africa,0,0.0,1.0,1.0,1.0,0,1,0
+4,Region::West of USA,0,1.0,1.0,0.0,0.0,0,0,1
