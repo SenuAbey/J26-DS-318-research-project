@@ -1,3 +1,5 @@
-,accuracy,precision,recall,f1
-LogisticRegression,0.6111,0.625,0.5556,0.5882
-RandomForest,0.5556,0.5714,0.4444,0.5
+model,accuracy_mean,accuracy_std,precision_mean,precision_std,recall_mean,recall_std,f1_mean,f1_std
+LogisticRegression,0.573,0.053,0.582,0.058,0.573,0.128,0.571,0.072
+RandomForest,0.676,0.08,0.67,0.068,0.71,0.137,0.684,0.089
+NbrMean+LogisticRegression,0.713,0.062,0.69,0.07,0.803,0.087,0.739,0.057
+NbrMean+RandomForest,0.721,0.064,0.713,0.075,0.762,0.082,0.734,0.061

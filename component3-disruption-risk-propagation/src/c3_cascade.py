@@ -4,7 +4,8 @@ Component 3 - Function 2 (part A): disruption cascade simulation (no torch neede
 Reads nodes.csv / edges.csv written by c3_pipeline.py, fails one node and simulates
 how the failure spreads along DIRECTED shipment lanes (independent-cascade model).
 
-    p(src -> dst) = dependency(dst on src) * late_rate(lane)      [a proxy, document it]
+    p(src -> dst) = dependency(dst on src) * late_rate(lane) * spread_scale   [a proxy, document it]
+    (use the SAME --spread-scale as c3_pipeline.py, default 6)
 
 Run:  python c3_cascade.py --start "Category::Cleats"
       python c3_cascade.py --rank            # which nodes cause the biggest cascades
@@ -15,10 +16,10 @@ import numpy as np
 import pandas as pd
 
 
-def load_graph(nodes_path="nodes.csv", edges_path="edges.csv"):
+def load_graph(nodes_path="nodes.csv", edges_path="edges.csv", spread_scale=6.0):
     nodes = pd.read_csv(nodes_path, index_col=0)
     edges = pd.read_csv(edges_path)
-    edges["p"] = (edges["dependency"] * edges["late_rate"]).clip(0, 1)
+    edges["p"] = (edges["dependency"] * edges["late_rate"] * spread_scale).clip(0, 1)
     out = defaultdict(list)
     for s, d, p in zip(edges["src"], edges["dst"], edges["p"]):
         out[s].append((d, p))
@@ -48,8 +49,9 @@ def main():
     ap.add_argument("--start")
     ap.add_argument("--rank", action="store_true")
     ap.add_argument("--sims", type=int, default=2000)
+    ap.add_argument("--spread-scale", type=float, default=6.0)
     a = ap.parse_args()
-    nodes, edges, out = load_graph()
+    nodes, edges, out = load_graph(spread_scale=a.spread_scale)
     total = len(nodes)
 
     if a.rank:
