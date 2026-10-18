@@ -5,7 +5,7 @@ Dataset: cleaned DataCo (run c3_clean.py first -> dataco_clean.csv)
 Run:  python c3_pipeline.py --csv dataco_clean.csv --no-gnn                 (simulated labels, default)
       python c3_pipeline.py --csv dataco_clean.csv --label-mode real --no-gnn (old real-label experiment)
 
-Outputs: nodes.csv, edges.csv (used by c3_cascade.py), model_comparison.csv
+Outputs: nodes.csv, edges.csv (used by c3_cascade.py), model_comparison.csv, predictions.csv (used by c3_mcnemar.py)
 
 Graph (a PROXY - DataCo has no real supplier/manufacturer/distributor IDs):
     Tier 1 Category (supply source) -> Tier 2 Country (distribution point) -> Tier 3 Region (hub)
@@ -17,6 +17,7 @@ Label modes
               (TAF fallback, same idea as Kayalvizhi et al. 2025). See simulate_labels().
 """
 import argparse
+import os
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
@@ -166,7 +167,7 @@ def neighbour_mean(X, edges, node_ids):
     return np.hstack([X, (A @ X) / deg])
 
 
-def run_sklearn(X, XN, y, tr, te, seed):
+def run_sklearn(X, XN, y, tr, te, seed, preds_out=None):
     res = {}
     for tag, M in [("", X), ("NbrMean+", XN)]:
         sc = StandardScaler().fit(M[tr])
@@ -174,11 +175,14 @@ def run_sklearn(X, XN, y, tr, te, seed):
         for name, m in [("LogisticRegression", LogisticRegression(max_iter=2000)),
                         ("RandomForest", RandomForestClassifier(n_estimators=200, random_state=seed))]:
             m.fit(Ms[tr], y[tr])
-            res[tag + name] = scores(y[te], m.predict(Ms[te]))
+            pr = m.predict(Ms[te])
+            res[tag + name] = scores(y[te], pr)
+            if preds_out is not None:
+                preds_out[tag + name] = pr
     return res
 
 
-def run_gnns(X, y, edges, node_ids, tr, va, te, seed, epochs=200):
+def run_gnns(X, y, edges, node_ids, tr, va, te, seed, epochs=200, preds_out=None):
     """GCN / GraphSAGE / GAT with PyTorch Geometric. Needs torch + torch_geometric (UNTESTED by the author)."""
     import torch
     import torch.nn.functional as F
@@ -231,6 +235,8 @@ def run_gnns(X, y, edges, node_ids, tr, va, te, seed, epochs=200):
         with torch.no_grad():
             pred = model(x, ei).argmax(1)
         res[kind] = scores(yt[te_t].numpy(), pred[te_t].numpy())
+        if preds_out is not None:
+            preds_out[kind] = pred[te_t].numpy()
         models[kind] = model
     return res, models, x, ei
 
@@ -250,6 +256,7 @@ def main():
     ap.add_argument("--spread-scale", type=float, default=6.0, help="simulated mode: strength of cascade spread")
     ap.add_argument("--repeats", type=int, default=2, help="repeats of 5-fold CV")
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--out-dir", default=".", help="folder for nodes.csv, edges.csv, model_comparison.csv, predictions.csv")
     ap.add_argument("--no-gnn", action="store_true", help="skip GNNs (no torch installed)")
     a = ap.parse_args()
     if a.min_node_orders is None:
@@ -276,23 +283,29 @@ def main():
     print("class balance (labelled):", np.bincount(y[lab].astype(int)))
 
     Xn = X.to_numpy()
-    XN = neighbour_mean(Xn, edges, list(nodes.index))
-    rows = []
+    ids = list(nodes.index)
+    XN = neighbour_mean(Xn, edges, ids)
+    rows, pred_frames = [], []
     cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=a.repeats, random_state=a.seed)
     gnn_ok = not a.no_gnn
     for k, (tr_all, te_l) in enumerate(cv.split(lab, y[lab])):
         tr_all, te_i = lab[tr_all], lab[te_l]
         tr_i, va_i = train_test_split(tr_all, test_size=0.18, stratify=y[tr_all], random_state=a.seed + k)
-        res = run_sklearn(Xn, XN, y, tr_i, te_i, a.seed)
+        pf = {}
+        res = run_sklearn(Xn, XN, y, tr_i, te_i, a.seed, preds_out=pf)
         if gnn_ok:
             try:
-                gres, _, _, _ = run_gnns(Xn, y, edges, list(nodes.index), tr_i, va_i, te_i, a.seed + k)
+                gres, _, _, _ = run_gnns(Xn, y, edges, ids, tr_i, va_i, te_i, a.seed + k, preds_out=pf)
                 res.update(gres)
             except ImportError:
                 print("torch / torch_geometric not installed - GNNs skipped")
                 gnn_ok = False
-        for m, s in res.items():
-            rows.append(dict(model=m, fold=k, **s))
+        for m, sc_ in res.items():
+            rows.append(dict(model=m, fold=k, **sc_))
+        fold = pd.DataFrame({"repeat": k // 5, "node": [ids[i] for i in te_i], "y_true": y[te_i].astype(int)})
+        for m, p in pf.items():
+            fold["pred_" + m] = p
+        pred_frames.append(fold)
 
     r = pd.DataFrame(rows)
     table = r.groupby("model")[["accuracy", "precision", "recall", "f1"]].agg(["mean", "std"]).round(3)
@@ -302,8 +315,11 @@ def main():
     table = table.loc[order]
     print(f"\n5-fold CV x {a.repeats} repeats ({r['fold'].nunique()} test folds), mean and std\n", table.to_string())
 
-    nodes.to_csv("nodes.csv"); edges.to_csv("edges.csv", index=False); table.to_csv("model_comparison.csv")
-    print("\nsaved nodes.csv, edges.csv, model_comparison.csv")
+    os.makedirs(a.out_dir, exist_ok=True)
+    P = lambda f: os.path.join(a.out_dir, f)
+    nodes.to_csv(P("nodes.csv")); edges.to_csv(P("edges.csv"), index=False); table.to_csv(P("model_comparison.csv"))
+    pd.concat(pred_frames).to_csv(P("predictions.csv"), index=False)
+    print(f"\nsaved nodes.csv, edges.csv, model_comparison.csv, predictions.csv in {os.path.abspath(a.out_dir)}")
 
 
 if __name__ == "__main__":
