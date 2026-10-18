@@ -1,0 +1,16 @@
+node,rank,src,dst,importance,dependency,late_rate
+Category::CDs,1,Category::CDs,Country::China,1.8138073682785034,0.005637388616112,0.5161290322580645
+Category::CDs,2,Category::CDs,Country::Australia,1.8035587072372437,0.0058997050147492,0.5
+Category::CDs,3,Category::Women's Clothing,Country::China,0.9680546522140503,0.0156392071285688,0.6162790697674418
+Category::CDs,4,Category::Golf Balls,Country::China,0.9678042531013489,0.0096381160210947,0.6037735849056604
+Category::CDs,5,Category::Golf Gloves,Country::Australia,0.9674871563911438,0.0051622418879056,0.5714285714285714
+Country::Suecia,1,Category::Cleats,Country::Suecia,0.9864447116851807,0.1296703296703296,0.5338983050847458
+Country::Suecia,2,Category::Fishing,Country::Suecia,0.9833575487136841,0.1032967032967032,0.5638297872340425
+Country::Suecia,3,Category::Men's Footwear,Country::Suecia,0.9817875623703003,0.1296703296703296,0.6779661016949152
+Country::Suecia,4,Category::Camping & Hiking,Country::Suecia,0.9784371852874756,0.0846153846153846,0.5324675324675324
+Country::Suecia,5,Category::Women's Apparel,Country::Suecia,0.9780864715576172,0.1362637362637362,0.6129032258064516
+Region::Central America,1,Country::Panamá,Region::Central America,1.0072956085205078,0.0692573783763891,0.5228480340063762
+Region::Central America,2,Country::Guatemala,Region::Central America,0.9784821271896362,0.097850886877162,0.575028206092516
+Region::Central America,3,Category::Cardio Equipment,Country::El Salvador,0.9692131876945496,0.0711308696860238,0.58203125
+Region::Central America,4,Country::México,Region::Central America,0.968666136264801,0.4638625156399499,0.574851249504165
+Region::Central America,5,Category::Shop By Sport,Country::Honduras,0.9671908617019653,0.0643961076130509,0.5555555555555556
