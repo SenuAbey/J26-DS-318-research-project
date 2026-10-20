@@ -1,0 +1,24 @@
+feature,forecast,width_relative,width_units,group,forecast_share_%,width_relative_share_%,width_units_share_%
+sales_lag_7,0.0147,0.3046,10.7982,"Recent demand (lags, averages)",3.5411,15.4673,14.1208
+last_year_3w_mean,0.0324,0.2197,8.5297,"Seasonality (week, month, last year)",7.8183,11.1584,11.1543
+sales_lag_25,0.0045,0.1651,5.6117,"Recent demand (lags, averages)",1.0788,8.3859,7.3384
+sales_lag_12,0.0068,0.1386,5.4139,"Recent demand (lags, averages)",1.639,7.0379,7.0797
+mean_26w,0.0112,0.1336,4.6044,"Recent demand (lags, averages)",2.7065,6.7866,6.0212
+sales_lag_0,0.1261,0.1326,5.2653,"Recent demand (lags, averages)",30.4263,6.7316,6.8853
+sales_lag_4,0.0086,0.1292,4.8555,"Recent demand (lags, averages)",2.0635,6.5603,6.3495
+mean_4w,0.0905,0.1238,4.8859,"Recent demand (lags, averages)",21.8418,6.2849,6.3893
+sales_lag_3,0.0126,0.1036,4.1081,"Recent demand (lags, averages)",3.0332,5.2634,5.3722
+price_ratio,0.0071,0.0859,3.3973,Promotion and price,1.7173,4.3627,4.4426
+log_series_level,0.0045,0.0646,4.0109,Product category and size,1.0881,3.2786,5.245
+sales_lag_2,0.0123,0.061,2.3069,"Recent demand (lags, averages)",2.9574,3.0968,3.0167
+last_year_same_week,0.0198,0.0571,2.0998,"Seasonality (week, month, last year)",4.7716,2.8981,2.7459
+sales_lag_1,0.0175,0.0518,2.0974,"Recent demand (lags, averages)",4.2183,2.6291,2.7428
+week_of_year,0.0087,0.0516,2.4926,"Seasonality (week, month, last year)",2.0883,2.6186,3.2595
+sales_lag_51,0.0,0.05,1.8548,"Recent demand (lags, averages)",0.0,2.541,2.4255
+snap_days,0.0186,0.0279,1.3435,SNAP days (purchasing-power timing),4.4776,1.4178,1.757
+weeks_ahead,0.0,0.0221,1.0791,Forecast horizon,0.0,1.1206,1.4112
+category,0.0011,0.0209,0.6693,Product category and size,0.2577,1.0622,0.8752
+price_change_vs_now,0.0162,0.0186,0.7271,Promotion and price,3.9171,0.9433,0.9508
+month,0.0005,0.0042,0.1981,"Seasonality (week, month, last year)",0.1275,0.215,0.2591
+has_event,0.0,0.0021,0.0879,Calendar events,0.0,0.1063,0.115
+promo_flag,0.001,0.0007,0.0331,Promotion and price,0.2307,0.0335,0.0433

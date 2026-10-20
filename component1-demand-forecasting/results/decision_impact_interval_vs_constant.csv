@@ -1,0 +1,3 @@
+model,C_cheaper_in_pct_of_products,mean_cost_B,mean_cost_C,cost_change_pct,p_value
+LightGBM,47.2868,31.3952,29.5797,-5.7827,0.2749
+TFT,44.9612,31.5262,30.3618,-3.6933,0.7235

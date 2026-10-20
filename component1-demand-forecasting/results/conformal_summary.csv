@@ -1,0 +1,19 @@
+model,method,split,n,coverage,width,rel_width,gap_to_95
+LightGBM,CQR by category,calib,20898.0,95.15,103.88,1.86,0.15
+LightGBM,CQR by category,test,21156.0,94.88,97.21,1.85,-0.12
+LightGBM,CQR by horizon,calib,20898.0,95.05,103.88,1.86,0.05
+LightGBM,CQR by horizon,test,21156.0,95.29,97.21,1.85,0.29
+LightGBM,CQR global,calib,20898.0,95.03,103.87,1.86,0.03
+LightGBM,CQR global,test,21156.0,95.2,97.2,1.85,0.2
+LightGBM,CQR rolling 26w,test,21156.0,95.86,97.25,1.85,0.86
+LightGBM,raw,calib,20898.0,93.55,103.79,1.86,-1.45
+LightGBM,raw,test,21156.0,93.66,97.12,1.85,-1.34
+TFT,CQR by category,calib,20898.0,95.03,92.09,1.79,0.03
+TFT,CQR by category,test,20382.0,95.81,88.0,1.74,0.81
+TFT,CQR by horizon,calib,20898.0,95.05,90.72,1.79,0.05
+TFT,CQR by horizon,test,20382.0,95.85,86.73,1.75,0.85
+TFT,CQR global,calib,20898.0,95.01,90.83,1.79,0.01
+TFT,CQR global,test,20382.0,95.94,86.78,1.75,0.94
+TFT,CQR rolling 26w,test,20382.0,95.59,86.08,1.73,0.59
+TFT,raw,calib,20898.0,86.56,88.86,1.72,-8.44
+TFT,raw,test,20382.0,87.85,84.78,1.68,-7.15

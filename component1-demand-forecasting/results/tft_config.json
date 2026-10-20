@@ -1,0 +1,19 @@
+{
+  "hyperparameters": {
+    "hidden_size": 16,
+    "attention_head_size": 2,
+    "dropout": 0.1,
+    "hidden_continuous_size": 8,
+    "learning_rate": 0.03
+  },
+  "val_loss": 8.799643516540527,
+  "parameters": 28021,
+  "normalizer": "encoder",
+  "quantiles": [
+    0.025,
+    0.1,
+    0.5,
+    0.9,
+    0.975
+  ]
+}

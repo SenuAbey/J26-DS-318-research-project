@@ -1,0 +1,11 @@
+vs,FOCUS_better_in_pct_of_series,mean_MAE_difference,p_value,significant_5pct
+Seasonal naive (52w),98.4496,-8.8313,0.0,True
+Naive,89.9225,-2.4356,0.0,True
+Moving average (4w),85.2713,-1.68,0.0,True
+MC-Dropout LSTM,68.9922,-0.8014,0.0,True
+LSTM,68.2171,-0.7844,0.0,True
+TFT,69.7674,-0.7328,0.0,True
+"ARIMA(1,1,1)",67.4419,-1.1303,0.0,True
+MC-Dropout TCN,62.7907,-0.5134,0.0,True
+TCN,59.6899,-0.4374,0.004,True
+LightGBM quantile reg.,44.9612,-0.0976,0.9691,False

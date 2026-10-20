@@ -1,0 +1,48 @@
+{
+  "hyperparameters": {
+    "num_leaves": 7,
+    "learning_rate": 0.08,
+    "min_child_samples": 80,
+    "subsample": 0.8,
+    "colsample_bytree": 0.7,
+    "reg_lambda": 10.0
+  },
+  "best_iteration": {
+    "0.025": 1,
+    "0.5": 80,
+    "0.975": 159
+  },
+  "features": [
+    "sales_lag_0",
+    "sales_lag_1",
+    "sales_lag_2",
+    "sales_lag_3",
+    "sales_lag_4",
+    "sales_lag_7",
+    "sales_lag_12",
+    "sales_lag_25",
+    "sales_lag_51",
+    "mean_4w",
+    "mean_26w",
+    "last_year_same_week",
+    "last_year_3w_mean",
+    "price_ratio",
+    "promo_flag",
+    "snap_days",
+    "has_event",
+    "price_change_vs_now",
+    "week_of_year",
+    "month",
+    "weeks_ahead",
+    "category",
+    "log_series_level"
+  ],
+  "categories": [
+    "FOODS",
+    "HOBBIES",
+    "HOUSEHOLD"
+  ],
+  "val_pinball": 0.10125909394911857,
+  "default_val_pinball": 0.10330782945086074,
+  "selected_method": "random"
+}

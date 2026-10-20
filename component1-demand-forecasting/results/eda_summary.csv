@@ -1,0 +1,25 @@
+metric,value
+series,129
+weeks per series,277
+date range,2011-01-29 to 2016-05-14
+mean weekly sales per series,58.51
+median weekly sales per series,34.0
+coefficient of variation (median over series),0.56
+event weeks relative sales,0.973
+non-event weeks relative sales,0.975
+promo weeks relative sales,1.166
+non-promo weeks relative sales,0.954
+share of promo weeks,0.096
+share of event weeks,0.477
+overall zero-sales share,0.08
+SNAP days mean,2.31
+SNAP days = 0 relative sales,0.95
+SNAP days > 0 relative sales,0.995
+SNAP effect (difference),0.045
+promo weeks relative sales,1.166
+non-promo weeks relative sales,0.954
+price ratio mean,1.006
+price ratio std,0.059
+series in FOODS,51
+series in HOBBIES,47
+series in HOUSEHOLD,31
