@@ -1,0 +1,4 @@
+condition,weeks_with,mean_relative_width_with,mean_relative_width_without,change_pct,mean_forecast_ratio_with,mean_forecast_ratio_without
+promotion week (promo_flag = 1),2034,4.64,2.421,91.648,1.453,0.968
+SNAP days in the week (snap_days > 0),22059,2.54,2.516,0.944,1.002,0.98
+calendar event in the week,20382,2.56,2.499,2.452,0.991,0.992
