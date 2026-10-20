@@ -1,0 +1,11 @@
+model,ratio,interval_vs_constant_buffer_pct,interval_vs_point_pct,interval_vs_moving_average_buffer_pct
+LightGBM,1,0.0,0.0,-10.09
+LightGBM,2,-1.2,-4.61,-10.38
+LightGBM,4,-5.78,-22.43,-12.94
+LightGBM,9,-7.71,-47.05,-14.04
+LightGBM,19,-8.08,-65.98,-14.89
+TFT,1,0.0,0.0,-5.69
+TFT,2,-0.59,-5.32,-7.9
+TFT,4,-3.69,-22.3,-10.64
+TFT,9,-5.13,-46.27,-11.3
+TFT,19,-6.0,-65.31,-12.07

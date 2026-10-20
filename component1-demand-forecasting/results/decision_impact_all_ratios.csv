@@ -1,0 +1,41 @@
+ratio,model,policy,k,cost_per_unit_demand,service_level_pct,fill_rate_pct,overstock_units_per_week,lost_units_per_week
+1,LightGBM,A. Point forecast,0.0,0.3068,52.3943,84.1849,7.2569,7.7191
+1,LightGBM,B. Point + constant buffer,0.0,0.3068,52.3943,84.1849,7.2569,7.7191
+1,LightGBM,C. Point + interval buffer,0.0,0.3068,52.3943,84.1849,7.2569,7.7191
+1,TFT,A. Point forecast,0.0,0.3218,53.8711,84.0429,7.9204,7.7884
+1,TFT,B. Point + constant buffer,0.0,0.3218,53.8711,84.0429,7.9204,7.7884
+1,TFT,C. Point + interval buffer,0.0,0.3218,53.8711,84.0429,7.9204,7.7884
+1,Moving average (4w),A. Point forecast,0.0,0.3413,55.8434,83.9179,8.8065,7.8494
+1,Moving average (4w),B. Point + constant buffer,0.0,0.3413,55.8434,83.9179,8.8065,7.8494
+2,LightGBM,A. Point forecast,0.0,0.465,52.3943,84.1849,7.2569,7.7191
+2,LightGBM,B. Point + constant buffer,0.45,0.4489,66.6323,89.898,12.0508,4.9306
+2,LightGBM,C. Point + interval buffer,0.15,0.4436,65.8277,89.9248,11.8139,4.9175
+2,TFT,A. Point forecast,0.0,0.4814,53.8711,84.0429,7.9204,7.7884
+2,TFT,B. Point + constant buffer,0.45,0.4585,68.3544,90.1826,12.7968,4.7917
+2,TFT,C. Point + interval buffer,0.1,0.4558,63.8406,88.4016,10.9254,5.661
+2,Moving average (4w),A. Point forecast,0.0,0.5021,55.8434,83.9179,8.8065,7.8494
+2,Moving average (4w),B. Point + constant buffer,0.45,0.4949,69.6448,89.9662,14.3607,4.8973
+4,LightGBM,A. Point forecast,0.0,0.7813,52.3943,84.1849,7.2569,7.7191
+4,LightGBM,B. Point + constant buffer,1.05,0.6432,80.3797,94.1956,20.0631,2.833
+4,LightGBM,C. Point + interval buffer,0.3,0.606,77.0435,93.7204,17.32,3.0649
+4,TFT,A. Point forecast,0.0,0.8006,53.8711,84.0429,7.9204,7.7884
+4,TFT,B. Point + constant buffer,0.95,0.6459,80.3797,93.9464,19.7077,2.9546
+4,TFT,C. Point + interval buffer,0.3,0.6221,79.5555,93.9222,18.4959,2.9665
+4,Moving average (4w),A. Point forecast,0.0,0.8237,55.8434,83.9179,8.8065,7.8494
+4,Moving average (4w),B. Point + constant buffer,1.0,0.6961,81.5818,94.2159,22.683,2.8231
+9,LightGBM,A. Point forecast,0.0,1.572,52.3943,84.1849,7.2569,7.7191
+9,LightGBM,B. Point + constant buffer,1.75,0.9018,89.9274,96.9284,30.5242,1.4992
+9,LightGBM,C. Point + interval buffer,0.55,0.8323,89.3583,97.1101,27.9299,1.4105
+9,TFT,A. Point forecast,0.0,1.5984,53.8711,84.0429,7.9204,7.7884
+9,TFT,B. Point + constant buffer,1.55,0.9054,88.8725,96.5296,28.9443,1.6938
+9,TFT,C. Point + interval buffer,0.5,0.8589,88.9216,96.6961,27.4069,1.6126
+9,Moving average (4w),A. Point forecast,0.0,1.6278,55.8434,83.9179,8.8065,7.8494
+9,Moving average (4w),B. Point + constant buffer,1.65,0.9682,90.3444,96.9039,33.6579,1.5112
+19,LightGBM,A. Point forecast,0.0,3.1535,52.3943,84.1849,7.2569,7.7191
+19,LightGBM,B. Point + constant buffer,2.35,1.167,94.3529,98.174,40.0261,0.8912
+19,LightGBM,C. Point + interval buffer,0.75,1.0727,94.2596,98.3583,37.1322,0.8013
+19,TFT,A. Point forecast,0.0,3.1941,53.8711,84.0429,7.9204,7.7884
+19,TFT,B. Point + constant buffer,2.15,1.1789,93.8328,97.9722,38.7377,0.9897
+19,TFT,C. Point + interval buffer,0.7,1.1082,94.0732,98.153,36.9608,0.9015
+19,Moving average (4w),A. Point forecast,0.0,3.236,55.8434,83.9179,8.8065,7.8494
+19,Moving average (4w),B. Point + constant buffer,2.25,1.2603,94.8484,98.1534,44.3897,0.9013

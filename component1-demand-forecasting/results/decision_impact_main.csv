@@ -1,0 +1,9 @@
+model,policy,k,cost_per_unit_demand,service_level_pct,fill_rate_pct,overstock_units_per_week,lost_units_per_week
+LightGBM,C. Point + interval buffer,0.3,0.606,77.0435,93.7204,17.32,3.0649
+TFT,C. Point + interval buffer,0.3,0.6221,79.5555,93.9222,18.4959,2.9665
+LightGBM,B. Point + constant buffer,1.05,0.6432,80.3797,94.1956,20.0631,2.833
+TFT,B. Point + constant buffer,0.95,0.6459,80.3797,93.9464,19.7077,2.9546
+Moving average (4w),B. Point + constant buffer,1.0,0.6961,81.5818,94.2159,22.683,2.8231
+LightGBM,A. Point forecast,0.0,0.7813,52.3943,84.1849,7.2569,7.7191
+TFT,A. Point forecast,0.0,0.8006,53.8711,84.0429,7.9204,7.7884
+Moving average (4w),A. Point forecast,0.0,0.8237,55.8434,83.9179,8.8065,7.8494
