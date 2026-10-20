@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- TEMPLATE FILE. Do not open this directly: the data placeholder in the script below is filled with
+     results/dashboard_data.json by dashboard/refresh_dashboard.py, which writes the working dashboard/dashboard.html.
+     Edit the design here, then re-run refresh_dashboard.py. -->
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>J26-DS-318 · Demand Forecasting &amp; Uncertainty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7fa;--card:#fff;--tx:#0f1b2d;--mu:#5b6778;--bd:#e1e6ed;--ac:#1d4ed8;--acs:#e8efff;--up:#1d4ed8;--dn:#c0392b;--wn:#fff4d6;--wt:#8a5a00;--ok:#e3f6ec;--okt:#1e7a4d;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e131b;--card:#161d28;--tx:#e8edf5;--mu:#98a4b5;--bd:#2a3342;--ac:#6ea0ff;--acs:#1c2b4d;--up:#6ea0ff;--dn:#ff7b6b;--wn:#3a2f10;--wt:#f1c56a;--ok:#12332a;--okt:#58d19a}}
+:root[data-theme=dark]{--bg:#0e131b;--card:#161d28;--tx:#e8edf5;--mu:#98a4b5;--bd:#2a3342;--ac:#6ea0ff;--acs:#1c2b4d;--up:#6ea0ff;--dn:#ff7b6b;--wn:#3a2f10;--wt:#f1c56a;--ok:#12332a;--okt:#58d19a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.w{max-width:1180px;margin:auto;padding:14px}
+header{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--card);border-bottom:1px solid var(--bd);padding:12px 14px}
+.bd{background:#0f1b2d;color:#fff;border-radius:6px;padding:2px 8px;font:600 12px ui-monospace,Menlo,monospace}.ch{background:var(--ok);color:var(--okt);border-radius:6px;padding:2px 8px;font:600 11px ui-monospace,Menlo,monospace;margin-left:6px}
+header h1{font-size:15px;margin:4px 0 0}.bt{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:8px;padding:8px 12px;font:600 13px inherit;cursor:pointer}.bt.p{background:var(--ac);color:#fff;border-color:var(--ac)}.bt[disabled]{opacity:.55;cursor:default}
+h2{font-size:21px;margin:14px 0 2px}h3{font-size:14px;margin:0 0 2px}.sub{color:var(--mu);font-size:12.5px}.mono{font:11.5px ui-monospace,Menlo,monospace;color:var(--mu)}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px;min-width:0}.g{display:grid;gap:12px;margin-top:12px}.g3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.tb{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:flex-end;margin-bottom:10px}.ct{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}.ct label{font-size:10.5px;letter-spacing:.06em;color:var(--mu);text-transform:uppercase;display:flex;flex-direction:column;gap:3px}
+select{background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:8px;padding:7px 8px;font-size:13px;max-width:230px}.sg{display:inline-flex;background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:2px}.sg button{border:0;background:none;color:var(--mu);padding:5px 10px;border-radius:6px;font:600 12.5px inherit;cursor:pointer}.sg button.on{background:var(--card);color:var(--ac);box-shadow:0 1px 2px #0002}
+.sc{background:var(--wn);color:var(--wt);border-radius:8px;padding:7px 10px;font-size:12.5px;margin-bottom:8px}svg{width:100%;height:auto;display:block}svg text{fill:var(--mu);font-size:10.5px}
+.st{border:1px solid var(--bd);border-radius:10px;padding:9px 11px;margin-bottom:6px;font-size:13px;position:relative}.st b{display:block}.st span{color:var(--mu);font-size:12px}.ar{text-align:center;color:var(--mu);line-height:1;margin:-2px 0 4px}
+.dg{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}.dc{border:1px solid var(--bd);border-radius:10px;padding:9px;background:var(--bg)}.dc small{display:block;font:600 10.5px inherit;letter-spacing:.05em;color:var(--mu);text-transform:uppercase}.dc.off{opacity:.55;border-style:dashed}
+.pl{display:inline-block;border-radius:6px;padding:1px 7px;font-size:11.5px;font-weight:600;margin:3px 0}.pl.u{background:var(--acs);color:var(--ac)}.pl.d{background:#fde4e0;color:#b02a1a}.pl.n{background:var(--bd);color:var(--mu)}
+.kv{display:flex;justify-content:space-between;border-bottom:1px solid var(--bd);padding:6px 0;font-size:13px}.kv b{font-variant-numeric:tabular-nums}.nt{background:var(--acs);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;margin-top:12px;font-size:13px}
+.dx{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.dx>div{border:1px solid var(--bd);border-radius:10px;padding:11px}.dx h4{margin:0;font-size:11.5px;letter-spacing:.06em;color:var(--ac)}.dx small{color:var(--mu);display:block;margin-bottom:4px}.chip{display:inline-block;border:1px solid var(--bd);border-radius:7px;padding:2px 9px;margin:2px 3px 2px 0;font-size:12.5px;background:var(--bg)}
+.r{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:12.5px}.r>span:first-child{width:140px;flex:none}.t{flex:1;height:10px;position:relative;background:var(--bg);border-radius:5px}.t i{position:absolute;top:0;height:10px;border-radius:5px}.r>span:last-child{width:56px;text-align:right;font-variant-numeric:tabular-nums}
+.sx{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12.5px}th,td{padding:6px 7px;border-bottom:1px solid var(--bd);text-align:right;white-space:nowrap}th:first-child,td:first-child{text-align:left}th{color:var(--mu);font-weight:600}
+#ov{display:none;position:fixed;inset:0;background:#0007;z-index:5}#dr{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--card);z-index:6;transform:translateX(100%);transition:transform .2s;overflow-y:auto;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px));border-left:1px solid var(--bd)}body.o #ov{display:block}body.o #dr{transform:none}
+.nb{font-size:11.5px;color:var(--mu);margin-top:6px}
+
+.cw{position:relative}#tp{display:none;position:absolute;pointer-events:none;background:var(--card);border:1px solid var(--bd);border-radius:12px;box-shadow:0 8px 24px #0f1b2d22;padding:10px 12px;min-width:210px;font-size:12.5px;z-index:3}
+.tt{font-weight:700;margin-bottom:6px}.tr{display:flex;align-items:center;gap:7px;padding:2px 0;color:var(--mu)}.tr i{width:9px;height:9px;border-radius:50%;flex:none}.tr b{margin-left:auto;padding-left:14px;color:var(--tx);font-variant-numeric:tabular-nums}.tf{margin-top:6px;padding-top:6px;border-top:1px solid var(--bd);font-size:11.5px}.tf.ok{color:var(--okt)}.tf.no{color:var(--dn)}
+.lg{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:8px;font-size:12px;color:var(--mu)}.lg span{display:inline-flex;align-items:center;gap:6px}.lg i{display:inline-block;width:20px;height:0;border-top:2px solid var(--tx)}.lg .l2{border-top:2px dashed var(--ac)}.lg .l3{height:10px;border:0;background:var(--ac);opacity:.25;border-radius:3px;width:20px}.lg .l4{width:9px;height:9px;border:0;border-radius:50%;background:var(--dn)}
+.c{box-shadow:0 1px 2px #0f1b2d0a,0 6px 18px #0f1b2d0a;border-radius:14px}header{position:sticky;top:0;z-index:4;box-shadow:0 1px 0 var(--bd)}
+.bt,.sg button,select{transition:background .15s,border-color .15s,box-shadow .15s}.bt:hover:not([disabled]){border-color:var(--ac)}.bt.p{box-shadow:0 2px 8px #1d4ed84d}.sg{background:var(--acs);border-color:transparent;padding:3px}.sg button{padding:6px 12px}.sg button:hover:not(.on){color:var(--ac)}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}h2{letter-spacing:-.01em}.ct label{font-weight:600}
+#ch{cursor:crosshair}@media(max-width:640px){.w{padding:10px}#tp{min-width:180px}}
+.st{padding:7px 11px;margin-bottom:3px}.ar{margin:-1px 0 3px;font-size:12px}
+</style></head><body>
+<header><div><span class="bd">J26-DS-318</span><span class="ch">REAL M5 TEST DATA</span><h1>Explainable AI Framework for Stochastic Supply Chain Decision Intelligence</h1></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button class="bt" id="rs">Reset</button><button class="bt" disabled title="Integration with Components 2–4 is planned for PP2">End-to-end scenario · PP2</button></div></header>
+<div class="w">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px"><div><div class="mono" style="color:var(--ac)">COMPONENT 1</div><h2 style="margin-top:2px">Demand Forecasting &amp; Uncertainty</h2><div class="sub">Multi-horizon demand forecasting with conformal prediction intervals</div><div class="mono">Real model outputs on held-out test weeks · M5 Walmart store CA_1 (public retail data, not factory data)</div></div><button class="bt p" id="ex">✦ Explain Forecast</button></div>
+<div class="c" style="margin-top:12px"><div class="tb"><div><h3 id="ct">Demand &amp; Prediction Interval</h3><div class="sub" id="cs"></div></div>
+<div class="ct"><label>Product<select id="p"></select></label><label>Model<span class="sg" id="sm"><button data-v="LightGBM">LightGBM</button><button data-v="TFT">TFT</button></span></label><label>Weeks ahead<span class="sg" id="sh"><button data-v="1">1 week</button><button data-v="4">4 weeks</button></span></label><label>Forecast week<select id="w"></select></label></div></div>
+<div class="sc" id="bn"></div><div class="cw"><svg id="ch" viewBox="0 0 960 340"></svg><div id="tp"></div></div><div class="lg"><span><i class="l1"></i>Actual demand</span><span><i class="l2"></i>Forecast</span><span><i class="l3"></i>95% conformal interval</span><span><i class="l4"></i>Selected week (click the chart to change)</span></div></div>
+<div class="g g3"><div class="c"><h3>Forecasting pipeline</h3><div class="sub" style="margin-bottom:8px">How the numbers on this page are produced, from data to decision</div><div id="pl"></div></div>
+<div class="c"><h3>What drives this forecast</h3><div class="sub" style="margin-bottom:8px">Contribution to this week’s forecast, in units (SHAP, LightGBM)</div><div class="dg" id="dg"></div></div>
+<div class="c"><h3>Prediction summary</h3><div class="sub" style="margin-bottom:6px" id="ps0"></div><div id="ps"></div><button class="bt" style="width:100%;margin-top:10px" id="ex2">ⓘ How is the suggested order calculated?</button></div></div>
+<div class="nt"><b>Why this matters.</b> A point forecast gives one expected value. A calibrated interval gives the range of plausible demand, which is what ordering, safety stock and supplier decisions need. Its coverage is checked on weeks the model never saw.</div>
+<div class="c" style="margin-top:12px"><h3>Explainable decision — forecast stage</h3><div class="mono" id="dn0" style="margin-bottom:8px"></div><div class="dx" id="dx"></div></div>
+<h2 style="font-size:17px;margin-top:20px">Evidence from the held-out test weeks</h2>
+<div class="g g2"><div class="c sx"><h3>Is the interval honest? (target 95%)</h3><table id="cv"></table><div class="nb">Conformal prediction corrects the raw intervals. MC-Dropout baselines covered only 42–44%.</div></div>
+<div class="c sx"><h3>Does the interval help ordering?</h3><table id="di"></table><div class="nb" id="dn"></div></div>
+<div class="c sx"><h3>This product: ordering replay</h3><table id="rp"></table><div class="nb">Every test week for the selected product, model and horizon.</div></div>
+<div class="c"><h3>What widens the interval overall</h3><div id="gs"></div><div class="nb">Share of average |SHAP| of interval width. Lead time and economic indicators are not in M5; events and SNAP matter little.</div></div>
+<div class="c sx"><h3>Model accuracy (all test forecasts)</h3><table id="mc"></table><div class="nb">LightGBM was selected. Top models are close; only the simple baselines are clearly worse.</div></div>
+<div class="c"><h3>Limitations</h3><div class="sub" style="line-height:1.55"><b style="color:var(--tx)">One store (CA_1), 129 products, weekly data.</b><br>Results may differ for other stores, products or daily data. PP2 will test the method on factory data.<br><br><b style="color:var(--tx)">Lower bound is weak (often 0); the upper bound drives ordering.</b><br>Demand cannot go below 0 and many products sell few units, so the lower bound adds little. The order rule uses the upper bound.<br><br><b style="color:var(--tx)">Order costs are assumed (shortage = 4 × holding), not real factory costs.</b><br>M5 has no cost data, so the cost savings are a scenario. Real costs will replace them in PP2.</div></div></div>
+<div class="mono" style="margin:14px 0 24px">Generated from results/dashboard_data.json · LightGBM and TFT forecasts, CQR by horizon, TreeSHAP drivers.</div></div>
+<div id="ov"></div><aside id="dr"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h3 style="font-size:17px" id="dt">Why is the forecast changing?</h3><div class="sub" id="d0"></div></div><button class="bt" id="cl">✕</button></div><div id="d1"></div><div id="d2" hidden></div></aside>
+<script>
+const D=__DATA__;const W=D.weeks,$=i=>document.getElementById(i),F=(x,n=1)=>x==null?"–":Number(x).toFixed(n),R=Math.round;
+const PK=Object.keys(D.products).sort(),DEF={p:"FOODS_1_018_CA_1",m:"LightGBM",h:"1",w:0};let S={...DEF},CH=null;
+PK.forEach(k=>{const p=D.products[k];$("p").add(new Option(p.item+" · "+p.cat,k))});
+W.test_dates.forEach((d,i)=>$("w").add(new Option(d,i)));
+const seg=(id,key)=>$(id).onclick=e=>{if(e.target.dataset.v!=null){S[key]=e.target.dataset.v;render()}};seg("sm","m");seg("sh","h");
+$("p").onchange=e=>{S.p=e.target.value;render()};$("w").onchange=e=>{S.w=+e.target.value;render()};
+$("rs").onclick=()=>{S={...DEF};render()};const op=v=>document.body.classList.toggle("o",v);const dm_=m=>{S.dm=m;$("d1").hidden=m!=="f";$("d2").hidden=m!=="o";$("dt").textContent=m==="f"?"Why is the forecast changing?":"How is the suggested order calculated?";op(true)};$("ex").onclick=()=>dm_("f");$("ex2").onclick=()=>dm_("o");$("cl").onclick=$("ov").onclick=()=>op(false);
+const sn=a=>a.split(" (")[0],mean=a=>a.reduce((x,y)=>x+y,0)/a.length,
+ DS={"Recent demand":"Trend of the last weeks’ sales","Seasonality":"Week, month, same week last year","Promotion and price":"Discount or promotion","SNAP days":"Benefit-payment days in the week","Calendar events":"Holidays and special events","Product category and size":"Product type and volume","Forecast horizon":"How far ahead"};
+const bars=(en,mx)=>en.map(([a,v])=>`<div class="r"><span>${sn(a)}</span><div class="t"><i style="background:${v>=0?"var(--up)":"var(--dn)"};${v>=0?"left":"right"}:50%;width:${Math.abs(v)/mx*50}%"></i></div><span>${v>0?"+":""}${F(v,1)}</span></div>`).join("");
+const pol=(Q,y)=>{let s=0,o=0,l=0,c=0;Q.forEach((q,j)=>{if(q==null||y[j]==null)return;c++;if(q<y[j]){s++;l+=y[j]-q}else o+=q-y[j]});return[s,o/Math.max(c,1),l/Math.max(c,1)]};
+
+const svgEl=$("ch"),tp=$("tp"),fm=v=>Math.round(v).toLocaleString("en-US");
+const idxAt=e=>{if(!CH)return null;const r=svgEl.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*CH.VW;return Math.min(CH.n-1,Math.max(CH.i0,CH.i0+Math.round((x-CH.L)/((CH.VW-CH.L-CH.RR)/(CH.n-CH.i0-1)))))};
+svgEl.onmousemove=e=>{const i=idxAt(e);if(i==null)return;const{P,M,off,X,Y,VH,TP,BT,rel}=CH,j=i-off,ok=j>=0&&M.yhat[j]!=null;
+ let g=`<line x1="${X(i)}" x2="${X(i)}" y1="${TP-6}" y2="${VH-BT}" stroke="var(--mu)" stroke-opacity=".7"/><circle cx="${X(i)}" cy="${Y(P.sales[i])}" r="4" fill="var(--tx)" stroke="var(--card)" stroke-width="1.5"/>`;
+ if(ok)g+=`<circle cx="${X(i)}" cy="${Y(M.hi[j])}" r="3.2" fill="var(--card)" stroke="var(--ac)"/><circle cx="${X(i)}" cy="${Y(M.lo[j])}" r="3.2" fill="var(--card)" stroke="var(--ac)"/><circle cx="${X(i)}" cy="${Y(M.yhat[j])}" r="4.2" fill="var(--ac)" stroke="var(--card)" stroke-width="1.5"/>`;
+ $("hv").innerHTML=g;
+ const dt=W.history_dates[i];let h=`<div class="tt">${rel(i)} · week of ${dt}</div><div class="tr"><i style="background:var(--tx)"></i>${j>=0?"Actual demand":"Historical demand"}<b>${fm(P.sales[i])} units</b></div>`;
+ if(ok){const inn=P.sales[i]>=M.lo[j]&&P.sales[i]<=M.hi[j];h+=`<div class="tr"><i style="background:var(--ac)"></i>Forecast<b>${fm(M.yhat[j])} units</b></div><div class="tr"><i style="background:var(--ac);opacity:.35"></i>95% interval<b>${fm(M.lo[j])} – ${fm(M.hi[j])}</b></div><div class="tf ${inn?"ok":"no"}">${inn?"Actual inside the interval":"Actual outside the interval"} · click to explain</div>`}
+ tp.innerHTML=h;tp.style.display="block";const r=svgEl.getBoundingClientRect(),px=X(i)/CH.VW*r.width,w=tp.offsetWidth;tp.style.left=Math.max(4,Math.min(r.width-w-4,px+14>r.width-w-4?px-w-14:px+14))+"px";tp.style.top="34px"};
+svgEl.onmouseleave=()=>{tp.style.display="none";if($("hv"))$("hv").innerHTML=""};
+svgEl.onclick=e=>{const i=idxAt(e);if(i==null)return;const j=i-CH.off;if(j>=0&&CH.M.yhat[j]!=null){S.w=j;render()}};
+function render(){
+const P=D.products[S.p],H=P["h"+S.h],M=H[S.m];
+if(M.yhat[S.w]==null){S.w=M.yhat.map((v,j)=>v==null?-1:j).filter(j=>j>=0).pop();render();return}
+const wk=S.w,n=P.sales.length,off=n-M.yhat.length,nW=M.yhat.filter(v=>v!=null).length,Y_=P.sales.slice(off),V=M.yhat.map((v,j)=>v==null?-1:j).filter(j=>j>=0);
+[...$("w").options].forEach((o,j)=>o.disabled=M.yhat[j]==null);
+$("p").value=S.p;$("w").value=wk;[["sm","m"],["sh","h"]].forEach(([i,k])=>[...$(i).children].forEach(b=>b.classList.toggle("on",b.dataset.v==S[k])));
+$("cs").textContent=P.item+" · "+P.cat+" · "+S.h+"-week-ahead forecast";
+const LB=20,i0=Math.max(0,off-LB),N=n-i0,VW=960,VH=340,L=56,RR=18,TP=24,BT=40,
+ nice=x=>{const e=10**Math.floor(Math.log10(x)),f=x/e;return(f<=1?1:f<=2?2:f<=2.5?2.5:f<=5?5:10)*e},
+ top0=Math.max(...P.sales.slice(i0),...M.hi.filter(v=>v!=null))*1.04,stp=nice(top0/4),ym=Math.ceil(top0/stp)*stp,
+ X=i=>L+(i-i0)*(VW-L-RR)/(N-1),Y=v=>TP+(1-v/ym)*(VH-TP-BT),
+ kf=v=>v>=1000?(v/1000)+"k":String(v),rel=i=>i<off?"W-"+(off-i):"W+"+(i-off+1),
+ pt=a=>a.map(([i,v])=>X(i).toFixed(1)+","+Y(v).toFixed(1)).join(" "),
+ fp=V.map(j=>[j+off,M.yhat[j]]),hp=V.map(j=>[j+off,M.hi[j]]),lp=V.map(j=>[j+off,M.lo[j]]);
+let s=`<defs><linearGradient id="bg1" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--ac)" stop-opacity=".26"/><stop offset="1" stop-color="var(--ac)" stop-opacity=".12"/></linearGradient></defs>`;
+for(let v=0;v<=ym+1e-9;v+=stp)s+=`<line x1="${L}" x2="${VW-RR}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--bd)" ${v?'':'stroke-opacity="1"'} opacity="${v?.8:1}"/><text x="${L-8}" y="${Y(v)+3.5}" text-anchor="end">${kf(Math.round(v*100)/100)}</text>`;
+s+=`<text transform="translate(13 ${(TP+VH-BT)/2}) rotate(-90)" text-anchor="middle" style="font-size:10.5px">units / week</text>`;
+for(let i=i0;i<n;i++){const d=i<off?off-i:i-off;if(d%4===0&&!(i>=off&&d===0&&false))s+=`<text x="${X(i)}" y="${VH-BT+18}" text-anchor="middle">${rel(i)}</text>`}
+const fx=(X(off-1)+X(off))/2;
+s+=`<polygon fill="url(#bg1)" points="${pt(hp)} ${pt(lp.slice().reverse())}"/><polyline fill="none" stroke="var(--ac)" stroke-opacity=".35" stroke-width="1" points="${pt(hp)}"/><polyline fill="none" stroke="var(--ac)" stroke-opacity=".35" stroke-width="1" points="${pt(lp)}"/>`;
+s+=`<line x1="${fx}" x2="${fx}" y1="${TP-6}" y2="${VH-BT}" stroke="var(--mu)" stroke-dasharray="3 3"/><text x="${fx-6}" y="${TP-10}" text-anchor="end">forecast start</text>`;
+s+=`<polyline fill="none" stroke="var(--tx)" stroke-width="1.8" stroke-linejoin="round" points="${pt(P.sales.slice(i0).map((v,j)=>[j+i0,v]))}"/>`;
+s+=`<polyline fill="none" stroke="var(--ac)" stroke-width="2.2" stroke-dasharray="5 4" stroke-linejoin="round" points="${pt(fp)}"/>`;
+fp.forEach(([i,v])=>s+=`<circle cx="${X(i)}" cy="${Y(v)}" r="2.6" fill="var(--ac)"/>`);
+const sx=X(off+wk);s+=`<line x1="${sx}" x2="${sx}" y1="${TP-6}" y2="${VH-BT}" stroke="var(--dn)" stroke-opacity=".45"/><circle cx="${sx}" cy="${Y(M.yhat[wk])}" r="6" fill="none" stroke="var(--ac)" stroke-width="2"/><circle cx="${sx}" cy="${Y(Y_[wk])}" r="4.5" fill="var(--dn)" stroke="var(--card)" stroke-width="1.5"/>`;
+s+=`<g id="hv"></g>`;$("ch").innerHTML=s;
+CH={P,M,off,i0,n,X,Y,L,RR,VW,VH,TP,BT,rel};
+const yh=M.yhat[wk],lo=M.lo[wk],hi=M.hi[wk],y=Y_[wk],dm=D.decision_main.find(r=>r.model===S.m&&r.policy.startsWith("C")),k=dm.k,q=R(yh+k*(hi-yh)),lv=mean(P.sales.slice(off+wk-13,off+wk)),span=(hi-lo)/Math.max(lv,1)*100;
+const ev=W.test_event[wk],pr=P.promo[off+wk],sn2=P.snap[off+wk];
+$("bn").innerHTML=`<b>Week of ${W.test_dates[wk]}</b> · ${pr?"promotion active":"no promotion"} · ${sn2} SNAP day(s) · event: ${ev==="none"?"none":ev}. Actual demand was <b>${R(y)}</b> units (${y>=lo&&y<=hi?"inside":"outside"} the interval).`;
+$("pl").innerHTML=[["Historical demand + known factors","Past sales, price, promotion, SNAP, events, season","Preprocesses lags, rolling statistics, prices, promotions, SNAP and calendar features."],["Forecasting model: "+S.m,S.m==="TFT"?"Temporal Fusion Transformer, 5 quantiles":"Gradient-boosted trees, 3 quantiles: 2.5%, 50%, 97.5%",S.m==="TFT"?"Trains a transformer network to predict lower, median and upper demand quantiles.":"Trains quantile regression trees to predict lower, median and upper demand boundaries."],["Demand forecast","Median prediction, units per week","Takes the 50th percentile (median) as the point demand forecast."],["Conformal prediction (CQR)","Calibrated on weeks 194–235, per forecast distance","Calibrates interval errors per forecast horizon to reach about 95% coverage."],["95% prediction interval","Lower and upper plausible demand","Outputs lower and upper bounds that covered about 95% of held-out test weeks (LightGBM 95.3%, TFT 95.9%)."],["Model explainability: SHAP (XAI)","Feature attribution and driver identification","Uses exact TreeSHAP on the LightGBM models to quantify the factors behind each forecast and each interval width."],["Business decision impact","Newsvendor-style simulation, asymmetric cost","Feeds the interval into an order rule (shortage cost assumed 4× holding) and tests it against other ordering rules."]].map((a,i)=>`<div class="st"><b>${i+1}. ${a[0]}</b><span>${a[1]}</span></div>${i<6?'<div class="ar">↓</div>':""}`).join("");
+const fg=Object.entries(H.drivers.fgroups).map(([a,v])=>[a,v[wk]]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])),wg=Object.entries(H.drivers.groups).map(([a,v])=>[a,v[wk]]).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
+$("dg").innerHTML=fg.slice(0,5).map(([a,v])=>`<div class="dc"><small>${sn(a)}</small><span class="pl ${v>0.5?"u":v<-0.5?"d":"n"}">${v>0.5?"Raises demand":v<-0.5?"Lowers demand":"Neutral"}</span><div><b>${v>0?"+":""}${F(v,1)}</b> units</div><div class="sub">${DS[sn(a)]||""}</div></div>`).join("")+[["Lead time","Supplier delays"],["Economic indicators","Exchange rate, CPI, fuel"],["Sri Lankan events","Sinhala New Year, Vesak"]].map(a=>`<div class="dc off"><small>${a[0]}</small><span class="pl n">Not in M5</span><div class="sub">${a[1]} · factory data, PP2</div></div>`).join("");
+$("ps0").textContent="Selected week · "+S.m+" · "+S.h+"-week horizon";
+$("ps").innerHTML=[["Expected demand",R(yh)+" units"],["Lower bound (95%)",R(lo)+" units"],["Upper bound (95%)",R(hi)+" units"],["Interval width",R(hi-lo)+" units ("+F(span,0)+"% of avg weekly demand)"],["Actual demand",R(y)+" units"],["Avg weekly demand (prior 13 wks)",R(lv)+" units"],["Suggested order (assumed 4:1 cost)",q+" units"]].map(a=>`<div class="kv"><span>${a[0]}</span><b>${a[1]}</b></div>`).join("");
+const cv=D.conformal_summary.find(r=>r.model===S.m&&r.method==="CQR by horizon"&&r.split==="test").coverage,A=pol(M.yhat,Y_),C=pol(M.yhat.map((v,j)=>v+k*(M.hi[j]-v)),Y_),U=pol(M.hi,Y_),oh=S.h==="1"?"4":"1",MO=P["h"+oh][S.m],wo=mean(MO.hi.map((v,j)=>v-MO.lo[j])),wc=mean(M.hi.map((v,j)=>v-M.lo[j]));
+$("dn0").textContent="Illustrative decision explanation built from real model outputs for "+P.item+" · "+S.h+"-week horizon";
+$("dx").innerHTML=[["◎ DECISION","What should be done?",`Plan about <b>${q}</b> units for the week of ${W.test_dates[wk]}: the forecast (${R(yh)}) plus ${F(k,2)} of the distance to the upper bound (${R(hi)}). Assumes a missed sale costs 4× an unsold unit.`],
+["? UNCERTAINTY","What is uncertain?",`The 95% interval is ${R(lo)}–${R(hi)} units (${F(span,0)}% of the product’s average weekly demand). Its width is driven mostly by <b>${sn(wg[0][0]).toLowerCase()}</b>. On held-out weeks this method covered ${F(cv)}% (target 95%).`],
+["△ RISK","What could go wrong?",`Over this product’s ${nW} test weeks, ordering the forecast alone ran short in <b>${A[0]}</b> weeks; the buffered order in <b>${C[0]}</b>. Ordering the full upper bound ran short in ${U[0]} but held about ${R(U[1])} extra units a week.`],
+["☰ FACTORS","What influenced the decision?",[...fg.slice(0,3),wg[0]].map(a=>`<span class="chip">${sn(a[0])}</span>`).filter((v,i,a)=>a.indexOf(v)===i).join("")+`<span class="chip">Historical variability</span>`],
+["⇄ ALTERNATIVE","What happens under a different scenario?",`At ${oh} week(s) ahead this product’s typical interval is ${R(wo)} units wide, against ${R(wc)} at ${S.h}. Longer lead times widen the interval, so the buffer must grow.`]].map(a=>`<div><h4>${a[0]}</h4><small>${a[1]}</small>${a[2]}</div>`).join("");
+$("cv").innerHTML="<tr><th>Model · method</th><th>Coverage %</th><th>Width</th></tr>"+D.conformal_summary.filter(r=>r.split==="test"&&(r.method==="raw"||r.method==="CQR by horizon")).map(r=>`<tr><td>${r.model} · ${r.method==="raw"?"raw":"+ CQR"}</td><td>${F(r.coverage)}</td><td>${F(r.width)}</td></tr>`).join("");
+$("di").innerHTML="<tr><th>Model · rule</th><th>Cost</th><th>No-stockout wks %</th><th>Extra stock/wk</th><th>Lost/wk</th></tr>"+D.decision_main.filter(r=>r.model==="LightGBM"||(r.model==="TFT"&&r.policy.startsWith("C"))).map(r=>`<tr><td>${r.model} · ${r.policy.slice(0,1)}</td><td>${F(r.cost_per_unit_demand,3)}</td><td>${F(r.service_level_pct)}</td><td>${F(r.overstock_units_per_week)}</td><td>${F(r.lost_units_per_week)}</td></tr>`).join("");
+const v=D.decision_vs_constant.find(r=>r.model==="LightGBM");$("dn").textContent="A = forecast only, B = forecast + fixed safety stock, C = forecast + interval buffer (shortage = 4 × holding). C vs B: "+F(v.cost_change_pct)+"% cost, p = "+F(v.p_value,2)+", not significant per product.";
+$("rp").innerHTML="<tr><th>Ordering rule</th><th>Weeks short</th><th>Extra stock/wk</th><th>Lost/wk</th></tr>"+[["Order the forecast",A],["Order with interval buffer",C],["Order the full upper bound",U]].map(([a,r])=>`<tr><td>${a}</td><td>${r[0]} of ${nW}</td><td>${F(r[1])}</td><td>${F(r[2])}</td></tr>`).join("");
+const gs=D.shap_groups,gm=Math.max(...gs.map(r=>r["width_relative_share_%"]));$("gs").innerHTML=gs.map(r=>`<div class="r"><span>${sn(r.group)}</span><div class="t"><i style="left:0;background:var(--ac);width:${r["width_relative_share_%"]/gm*100}%"></i></div><span>${F(r["width_relative_share_%"])}%</span></div>`).join("");
+$("mc").innerHTML="<tr><th>Model</th><th>MAE</th><th>WAPE %</th><th>Coverage %</th></tr>"+D.model_comparison.filter(r=>r.split==="test").sort((a,b)=>a.WAPE-b.WAPE).slice(0,7).map(r=>`<tr><td>${r.model}</td><td>${F(r.MAE,2)}</td><td>${F(r.WAPE)}</td><td>${r["coverage_%"]==null?"–":F(r["coverage_%"])}</td></tr>`).join("");
+$("d0").textContent=P.item+" · "+S.h+"-week horizon · week of "+W.test_dates[wk];
+$("d1").innerHTML=`<div class="c" style="margin:12px 0"><div class="kv"><span>Expected demand</span><b>${R(yh)} units</b></div><div class="kv"><span>95% interval</span><b>${R(lo)} – ${R(hi)}</b></div></div><h3>Factor contributions to the forecast</h3><div class="sub">Typical forecast ${F(H.drivers.fbase[wk],0)} → this week ${F(H.drivers.ftotal[wk],0)} units. Blue raises demand, red lowers it.</div>${bars(fg,Math.max(...fg.map(e=>Math.abs(e[1])),1))}<h3 style="margin-top:16px">Why the interval is this wide</h3><div class="sub">Typical width ${F(H.drivers.base[wk],0)} → this week ${F(H.drivers.total[wk],0)} units. Blue widens it, red narrows it.</div>${bars(wg,Math.max(...wg.map(e=>Math.abs(e[1])),1))}${S.m==="TFT"?`<div class="sc" style="margin-top:12px"><b>TFT selected.</b> The factor bars explain the <b>LightGBM</b> forecast for this week (${R(H.LightGBM.yhat[wk])} units); the TFT forecast is ${R(yh)} units. TreeSHAP works on the LightGBM model, so TFT has no factor breakdown.</div>`:""}<div class="nb">Drivers come from the LightGBM quantile models (exact TreeSHAP). The interval bars explain the model’s own interval width (${F(H.drivers.total[wk],0)} units); the interval shown above is ${R(hi-lo)} units wide after the conformal correction.</div>`;
+
+const dA=D.decision_main.find(r=>r.model===S.m&&r.policy.startsWith("A")),dC=dm,so=v=>F(100-v.service_level_pct),chg=(dC.cost_per_unit_demand/dA.cost_per_unit_demand-1)*100;
+$("d2").innerHTML=`<div class="c" style="margin:0 0 12px"><div class="sub">Formula</div><div style="font-weight:700;margin:4px 0">Order = forecast + k × (upper bound − forecast)</div><div class="sub">k = ${F(k,2)} is the share of the gap between the forecast and the upper bound that is added as a safety buffer.</div></div>
+<h3>This week, step by step</h3>
+<div class="kv"><span>1. Forecast (median)</span><b>${R(yh)} units</b></div>
+<div class="kv"><span>2. Upper bound of the 95% interval</span><b>${R(hi)} units</b></div>
+<div class="kv"><span>3. Gap (upper − forecast)</span><b>${R(hi-yh)} units</b></div>
+<div class="kv"><span>4. Buffer = ${F(k,2)} × gap</span><b>+${F(k*(hi-yh),1)} units</b></div>
+<div class="kv"><span><b>Suggested order</b></span><b>${q} units</b></div>
+<h3 style="margin-top:16px">Why k = ${F(k,2)}?</h3>
+<div class="sub">k was chosen on the calibration weeks (194–235) as the value with the lowest total cost, assuming a missed sale costs 4× an unsold unit. It is then applied unchanged to the test weeks. A wider interval gives a bigger buffer automatically.</div>
+<h3 style="margin-top:16px">Does it help? (all products, test weeks)</h3>
+<div class="kv"><span>Weeks short, forecast only</span><b>${so(dA)}%</b></div>
+<div class="kv"><span>Weeks short, interval buffer</span><b>${so(dC)}%</b></div>
+<div class="kv"><span>Total cost change vs forecast only</span><b>${chg>0?"+":""}${F(chg)}%</b></div>
+<div class="kv"><span>Extra stock per week</span><b>${F(dA.overstock_units_per_week)} → ${F(dC.overstock_units_per_week)} units</b></div>
+<h3 style="margin-top:16px">What this does not include</h3>
+<div class="sub">The costs are assumed, not real (M5 has none). The rule also ignores stock on hand, lead time, minimum order quantities and pack sizes. It tells you how much stock to have available for that week, not a full purchase order. Against a fixed safety stock the gain is small and not statistically significant (p = ${F(v.p_value,2)}).</div>`;
+}
+render();
+</script></body></html>
