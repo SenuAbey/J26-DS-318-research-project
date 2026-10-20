@@ -134,7 +134,7 @@ check(B, "row count unchanged and every day matched a date", len(long) == n0 and
 check(B, "no missing event values left", long.event_name_1.notna().all() and long.event_type_1.notna().all())
 gate(B)
 
-# ---- B4. Aggregate to weekly ----
+# ---- B4. Aggregate to weekly ----(Add up the days into weeks)
 B = "B4 weekly"
 def first_event(s):
     s = s[s != "none"]
@@ -154,7 +154,7 @@ check(B, f"{EXPECTED_WEEKS} full weeks per item", wk_per_item.iloc[0] == EXPECTE
 del long
 gate(B)
 
-# ---- B5. Merge prices; a missing price = item not on sale yet ----
+# ---- B5. Merge prices; a missing price = item not on sale yet ----(Add the weekly price.)
 B = "B5 prices"
 n0 = len(weekly)
 weekly = weekly.merge(prices, on=["store_id", "item_id", "wm_yr_wk"], how="left")
@@ -174,12 +174,12 @@ log.append(("price gaps forward-filled", gaps))
 check(B, "no missing prices left", weekly.sell_price.notna().all(), f"{gaps} gap(s) filled")
 gate(B)
 
-# ---- B6. Duplicates ----
+# ---- B6. Duplicates ----(Remove repeated rows)
 n0 = len(weekly)
 weekly = weekly.drop_duplicates(subset=["series_id", "week_start"])
 log.append(("duplicate rows dropped", n0 - len(weekly)))
 
-# ---- B7. Keep only full-history series ----
+# ---- B7. Keep only full-history series ----(Keep only products that have the full num of weeks)
 B = "B7 full history"
 counts = weekly.groupby("series_id").size()
 full = counts[counts == counts.max()].index

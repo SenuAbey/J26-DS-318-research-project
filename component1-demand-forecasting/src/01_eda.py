@@ -1,5 +1,7 @@
 """
 01_eda.py - exploratory data analysis (Component 1)
+EDA asks “what patterns are in the sales?”
+Its purpose is to find out what drives demand, so we know which factors to give the model.
 Run from the component1-demand-forecasting folder:  python src/01_eda.py
 Needs: pip install matplotlib seaborn
 """
@@ -17,7 +19,7 @@ RES = ROOT / "results"
 RES.mkdir(exist_ok=True)
 sns.set_theme(style="whitegrid")
 
-w = pd.read_parquet(ROOT / "data" / "processed" / "m5_weekly_ca1.parquet")
+w = pd.read_parquet(ROOT / "data" / "processed" / "m5_weekly_ca1.parquet")#loads the cleaned weekly table
 
 # scale each series by its TRAINING mean so series of different size are comparable
 train_mean = w[w.split == "train"].groupby("series_id").sales.mean()
@@ -32,7 +34,7 @@ def shade(ax):
     ax.axvspan(d_cal, d_test, color="orange", alpha=0.15, label="calibration")
     ax.axvspan(d_test, d_end, color="red", alpha=0.12, label="test")
 
-# ---------- 1. total weekly sales over time ----------
+# ---------- 1. total weekly sales over time ----------(Is demand growing, flat or wavy?)
 total = w.groupby("week_start").sales.sum()
 fig, ax = plt.subplots(figsize=(11, 4))
 ax.plot(total.index, total.values, lw=1.2)
@@ -41,7 +43,7 @@ ax.set(title="Total weekly sales (all series) with data splits", xlabel="Week", 
 ax.legend()
 fig.tight_layout(); fig.savefig(RES / "eda_01_total_sales.png", dpi=150); plt.close(fig)
 
-# ---------- 2. event effect ----------
+# ---------- 2. event effect ----------(Do holidays and events change sales?)
 ev = (w.groupby("event_type").rel_sales.agg(["mean", "count"]).sort_values("mean", ascending=False))
 fig, axes = plt.subplots(1, 2, figsize=(11, 4))
 sns.barplot(x=ev.index, y=ev["mean"], ax=axes[0], color="steelblue")
@@ -51,7 +53,7 @@ sns.barplot(x=top.values, y=top.index, ax=axes[1], color="darkorange")
 axes[1].axvline(1, color="grey", ls="--"); axes[1].set(title="Top 8 events by relative sales", xlabel="Mean sales / series mean", ylabel="")
 fig.tight_layout(); fig.savefig(RES / "eda_02_events.png", dpi=150); plt.close(fig)
 
-# ---------- 3. promotion effect, by category ----------
+# ---------- 3. promotion effect, by category ----------(Do promotions raise sales?_)
 fig, ax = plt.subplots(figsize=(7, 4))
 pe = w.groupby(["cat_id", "promo_flag"]).rel_sales.mean().reset_index()
 pe["promo_flag"] = pe.promo_flag.map({0: "normal price", 1: "promo (price <95% of usual)"})
@@ -60,7 +62,7 @@ ax.axhline(1, color="grey", ls="--"); ax.set(title="Promotion effect by category
 ax.legend(title="")
 fig.tight_layout(); fig.savefig(RES / "eda_03_promotion.png", dpi=150); plt.close(fig)
 
-# ---------- 4. categories over time ----------
+# ---------- 4. categories over time ----------(Which category sells most?)
 cat = w.groupby(["week_start", "cat_id"]).sales.sum().reset_index()
 fig, ax = plt.subplots(figsize=(11, 4))
 sns.lineplot(data=cat, x="week_start", y="sales", hue="cat_id", ax=ax)
@@ -68,7 +70,7 @@ shade(ax)
 ax.set(title="Weekly sales by category", xlabel="Week", ylabel="Units sold")
 fig.tight_layout(); fig.savefig(RES / "eda_04_categories.png", dpi=150); plt.close(fig)
 
-# ---------- 5. seasonality ----------
+# ---------- 5. seasonality ----------(Are some weeks of the year busier?)
 fig, axes = plt.subplots(1, 2, figsize=(11, 4))
 woy = w[w.split == "train"].groupby("week_of_year").rel_sales.mean()
 axes[0].plot(woy.index, woy.values); axes[0].axhline(1, color="grey", ls="--")
@@ -78,7 +80,7 @@ sns.boxplot(data=w[w.split == "train"], x="season", y="rel_sales", order=["winte
 axes[1].set(title="Relative sales by season (training)", xlabel="", ylabel="")
 fig.tight_layout(); fig.savefig(RES / "eda_05_seasonality.png", dpi=150); plt.close(fig)
 
-# ---------- 6. series level: zero share and three example series ----------
+# ---------- 6. series level: zero share and three example series ----------(How “lumpy” is the data?)
 zs = w[w.split == "train"].groupby("series_id").sales.apply(lambda s: (s == 0).mean())
 fig, axes = plt.subplots(1, 2, figsize=(12, 4))
 axes[0].hist(zs, bins=20, color="slategrey")
@@ -93,7 +95,7 @@ axes[1].set(title="Three example series (high, medium, low volume)", xlabel="Wee
 axes[1].legend(fontsize=7)
 fig.tight_layout(); fig.savefig(RES / "eda_06_series.png", dpi=150); plt.close(fig)
 
-# ---------- 7. SNAP effect ----------
+# ---------- 7. SNAP effect ----------(Does the benefit-payment timing matter?)
 fig, axes = plt.subplots(1, 2, figsize=(12, 4))
 
 snap_effect = w.groupby("snap_days").rel_sales.mean()
@@ -115,7 +117,7 @@ axes[1].legend()
 
 fig.tight_layout(); fig.savefig(RES / "eda_07_snap.png", dpi=150); plt.close(fig)
 
-# ---------- 8. price effect ----------
+# ---------- 8. price effect ---------(Do discounts or price rises matter?)
 labels = ["<0.85", "0.85-0.95", "0.95-1.05", "1.05-1.15", ">1.15"]
 w["price_bin"] = pd.cut(w.price_ratio, bins=[0, 0.85, 0.95, 1.05, 1.15, 10], labels=labels)
 

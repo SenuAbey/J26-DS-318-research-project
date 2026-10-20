@@ -1,5 +1,6 @@
 """
 01_baselines.py - baseline forecasting models (Component 1)
+Runs 9 forecasting methods on the same weeks, scores them, and saves every forecast so the later files can reuse them.
 Models: Naive, Seasonal naive, Moving average, ARIMA, LightGBM quantile regression,
         LSTM (point) and MC-Dropout LSTM (intervals)
 Task:   forecast weekly sales 1-4 weeks ahead (rolling origin) on the calibration and test weeks.

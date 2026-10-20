@@ -15,10 +15,12 @@ print("=" * 60)
 print("DATASET OVERVIEW")
 print("=" * 60)
 
+# Print the size of each table
 print("\nCalendar shape:", calendar.shape)
 print("Sales shape:", sales.shape)
 print("Prices shape:", prices.shape)
 
+#Print the column names
 print("\n" + "=" * 60)
 print("COLUMNS")
 print("=" * 60)
