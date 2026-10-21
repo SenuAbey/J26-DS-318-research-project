@@ -26,7 +26,7 @@ def load_graph(nodes_path="nodes.csv", edges_path="edges.csv", spread_scale=6.0)
     return nodes, edges, out
 
 
-def simulate(out, start, n_sims=2000, seed=0):
+def simulate(out, start, n_sims=2000, seed=0, severity=1.0):
     rng = np.random.default_rng(seed)
     hit, parent = Counter(), defaultdict(Counter)
     for _ in range(n_sims):
@@ -35,7 +35,7 @@ def simulate(out, start, n_sims=2000, seed=0):
             nxt = []
             for u in frontier:
                 for v, p in out.get(u, []):
-                    if v not in failed and rng.random() < p:
+                    if v not in failed and rng.random() < min(1.0, p * severity):
                         failed.add(v); nxt.append(v); parent[v][u] += 1
             frontier = nxt
         hit.update(failed - {start})
@@ -50,6 +50,7 @@ def main():
     ap.add_argument("--rank", action="store_true")
     ap.add_argument("--sims", type=int, default=2000)
     ap.add_argument("--spread-scale", type=float, default=6.0)
+    ap.add_argument("--severity", type=float, default=1.0, help="0.3-1.0; scales every spread probability")
     a = ap.parse_args()
     nodes, edges, out = load_graph(spread_scale=a.spread_scale)
     total = len(nodes)
@@ -57,13 +58,13 @@ def main():
     if a.rank:
         rows = []
         for s in out:
-            prob, _ = simulate(out, s, n_sims=500)
+            prob, _ = simulate(out, s, n_sims=500, severity=a.severity)
             rows.append((s, prob.sum(), prob.sum() / total))
         r = pd.DataFrame(rows, columns=["node", "expected_nodes_affected", "share_of_network"])
         print(r.sort_values("expected_nodes_affected", ascending=False).head(10).round(3).to_string(index=False))
         return
 
-    prob, path = simulate(out, a.start, a.sims)
+    prob, path = simulate(out, a.start, a.sims, severity=a.severity)
     print(f"Failure at {a.start}: expected nodes affected = {prob.sum():.2f} "
           f"({100 * prob.sum() / total:.1f}% of {total} nodes)")
     df = pd.DataFrame({"infection_prob": prob.round(3), "most_likely_via": pd.Series(path)})
